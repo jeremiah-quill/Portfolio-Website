@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import NotFound from "./pages/NotFound";
+import Modal from "./components/Modal";
+import { Routes, Route } from "react-router-dom";
+import {useModalContext} from './contexts/ModalContext'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { isModal, resetModal, modalContent } = useModalContext();
+
+	return (
+		<div className="App">
+
+			<Modal
+				isModal={isModal}
+				resetModal={resetModal}
+				content={modalContent}
+			/>
+			
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/work" element={<Work />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
