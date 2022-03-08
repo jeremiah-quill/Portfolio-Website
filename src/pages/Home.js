@@ -10,7 +10,7 @@ const Home = () => {
 	const [featuredProjects, setFeaturedProjects] = useState([projectData[0], projectData[1], projectData[2]])
 
 	return (
-		<main>
+		<div class="main-container">
 			<section className="section-1">
 				<div className="section-container">
 					<FadeUp duration={1000} triggerOnce={true} fraction={1}>
@@ -198,7 +198,7 @@ const Home = () => {
 					</form>
 				</div>
 			</section>
-		</main>
+		</div>
 	);
 };
 

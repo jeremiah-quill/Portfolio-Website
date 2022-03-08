@@ -16,7 +16,7 @@ a {
 }
 
 html,
-body {
+body, #root {
 	height: 100%;
 	width: 100%;
 	padding: 0;
@@ -24,7 +24,7 @@ body {
 	background-color: var(--dark-main);
 }
 
-/* body {
+/* #root {
 	overflow-y: hidden;
 } */
 
@@ -214,7 +214,7 @@ section {
 	position: relative;
 }
 
-.image-container::after {
+/* .image-container::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -222,7 +222,7 @@ section {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
+} */
 
 .expand {
 	position: absolute;
@@ -301,22 +301,24 @@ label {
 .modal-card {
 	z-index: 2001;
 	position: fixed;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 	padding: 0.5em;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+
 }
 
 .modal {
-	overflow-y: hidden;
+	overflow-y: scroll;
 }
 
 .detail-image-container {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	margin-top: 100px;
 }
 
 .detail-image-1 {
@@ -332,30 +334,31 @@ label {
 }
 
 .detail-content-container {
-	display: flex;
 	width: 100%;
-	justify-content: center;
-	margin-top: 500px;
+	overflow-y: scroll;
+	height: 50%;
+	overflow-y: scroll;
+	margin: 0 auto;
+	margin-top: 65%;
+	padding-bottom: 75px;
+
 }
 
 .detail-content-container > p {
 	color: white;
 }
 
-.detail-content-container > p:first-of-type {
+/* .detail-content-container > p:first-of-type {
 	margin-right: 1em;
-}
+} */
 
 .detail-image {
-	width: 40%;
-	/* border: 2px solid black; */
 	position: absolute;
 	left: 50%;
-}
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
-/* .detail-image:hover {
-	z-index: 20000;
-} */
+}
 
 .reset-modal-btn {
 	position: absolute;
@@ -366,7 +369,6 @@ label {
 	border: none;
 	outline: none;
 	cursor: pointer;
-
 }
 
 .reset-modal-icon {
@@ -382,17 +384,16 @@ label {
 }
 
 .move-1-enter.move-1-enter-active {
-	transform: rotate(15deg) translateX(0%);
+	transform: scale(.75) translateX(0%);
 	transition: transform 500ms ease;
 }
 
 .move-1-enter-done {
-	transform: rotate(15deg) translateX(0%);
-
+	transform: scale(.75) translateX(0%);
 }
 
 .move-1-exit {
-	transform: rotate(15deg) translateX(0%);
+	transform: scale(.75) translateX(0%);
 }
 
 .move-1-exit.move-1-exit-active {
@@ -406,17 +407,16 @@ label {
 }
 
 .move-3-enter.move-3-enter-active {
-	transform: translateX(-100%) rotate(-15deg);
+	transform: translateX(-100%) scale(.75);
 	transition: transform 500ms ease;
 }
 
 .move-3-enter-done {
-	transform: translateX(-100%) rotate(-15deg);
-
+	transform: translateX(-100%) scale(.75);
 }
 
 .move-3-exit {
-	transform: translateX(-100%) rotate(-15deg);
+	transform: translateX(-100%) scale(.75);
 }
 
 .move-3-exit.move-3-exit-active {
@@ -424,6 +424,65 @@ label {
 	transition: transform 500ms ease;
 }
 
+@media screen and (min-width: 750px) {
+	.detail-content-container {
+		margin-top: 500px;
+		width: 50%;
+		padding-top: 2em;
+	}
+
+	.detail-image {
+		width: 40%;
+	}
+
+	/* Animations */
+
+	/* Right image fan out */
+	/* .move-1-enter {
+		transform: rotate(0deg) translateX(-50%);
+	}
+
+	.move-1-enter.move-1-enter-active {
+		transform: rotate(15deg) translateX(0%);
+		transition: transform 500ms ease;
+	}
+
+	.move-1-enter-done {
+		transform: rotate(15deg) translateX(0%);
+	}
+
+	.move-1-exit {
+		transform: rotate(15deg) translateX(0%);
+	}
+
+	.move-1-exit.move-1-exit-active {
+		transform: rotate(0deg) translateX(-50%);
+		transition: transform 500ms ease;
+	} */
+
+	/* Left image fan out */
+	/* .move-3-enter {
+		transform: translateX(-50%) rotate(0deg);
+	}
+
+	.move-3-enter.move-3-enter-active {
+		transform: translateX(-100%) rotate(-15deg);
+		transition: transform 500ms ease;
+	}
+
+	.move-3-enter-done {
+		transform: translateX(-100%) rotate(-15deg);
+	}
+
+	.move-3-exit {
+		transform: translateX(-100%) rotate(-15deg);
+	}
+
+	.move-3-exit.move-3-exit-active {
+		transform: translateX(-50%) rotate(0deg);
+		transition: transform 500ms ease;
+	} */
+}
 
 /* Modal backdrop */
 .modal-animate-enter > .modal-backdrop {
@@ -459,7 +518,6 @@ label {
 	transition: opacity 500ms ease;
 	/* transition-delay: 650ms; */
 }
-
 
 @media screen and (min-width: 750px) {
 	.section-container {

@@ -10,9 +10,7 @@ function Project({
 	stack,
 	liveLink,
 	codeLink,
-	featuredImg1,
-	featuredImg2,
-	featuredImg3,
+	featuredImgs,
 	featuredText1,
 	featuredText2,
 	isFeatured,
@@ -27,12 +25,9 @@ function Project({
 					onClick={() =>
 						configureModal(
 							<FeaturedContent
-								featuredImg1={featuredImg1}
-								featuredImg2={featuredImg2}
-								featuredImg3={featuredImg3}
+								featuredImgs={featuredImgs}
 								featuredText1={featuredText1}
 								featuredText2={featuredText2}
-								openFeature={true}
 							/>
 						)
 					}

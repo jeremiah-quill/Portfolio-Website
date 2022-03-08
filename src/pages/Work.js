@@ -10,7 +10,7 @@ import Modal from "../components/Modal";
 
 function Work() {
 	const [isModal, setIsModal] = useState(false);
-	console.log(projectData)
+	// console.log(projectData)
 
 	return (
 		<section className="section-3">
@@ -42,9 +42,9 @@ function Work() {
 								liveLink={project.liveLink}
 								codeLink={project.codeLink}
 								isFeatured={project.isFeatured}
-								featuredImg1={project.featuredImg1}
-								featuredImg2={project.featuredImg2}
-								featuredImg3={project.featuredImg3}
+								featuredImgs={project.featuredImgs}
+								// featuredImg2={project.featuredImg2}
+								// featuredImg3={project.featuredImg3}
 								featuredText1={project.featuredText1}
 								featuredText2={project.featuredText2}
 								

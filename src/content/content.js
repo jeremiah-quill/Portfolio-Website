@@ -5,14 +5,21 @@ const projectData = [
 		title: "Flow with Megmo",
 		description:
 			"A full stack marketing page + scheduling tool for an online yoga instructor. Production site launched February 2022.",
-		stack: 
-			"React, Mongo, Express, Node, GraphQL, Heroku, HTML",
+		stack: "React, Mongo, Express, Node, GraphQL, Heroku, HTML",
 		liveLink: "http://www.flowwithmegmo.com/",
 		codeLink: "https://github.com/jeremiah-quill/flow-with-megmo",
 		isFeatured: true,
-		featuredImg1: "./images/fwm-landing-page.png",
-		featuredImg2: "./images/fwm-admin-view.png",
-		featuredImg3: "./images/fwm-student-view.png",
+		featuredImgs: [
+			{ img: "./images/fwm-landing-page.png", idx: 0 },
+			{ img: "./images/fwm-admin-view.png", idx: 1 },
+			{ img: "./images/fwm-student-view.png", idx: 2 },
+			{ img: "./images/wishlist-featured-2.png", idx: 3 },
+			{ img: "./images/wishlist-featured-1.png", idx: 4 },
+			{ img: "./images/wishlist-featured-3.png", idx: 5 },
+
+		],
+		// featuredImg2: "./images/fwm-admin-view.png",
+		// featuredImg3: "./images/fwm-student-view.png",
 		featuredText1:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
 		featuredText2:
