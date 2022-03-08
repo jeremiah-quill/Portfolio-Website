@@ -2,8 +2,7 @@ import React from "react";
 import closeIcon from "../images/icons8-close.svg";
 import { CSSTransition } from "react-transition-group";
 
-function Modal({ isModal, resetModal, content, timeout, unmountOnExit }) {
-	// if (!isModal) return null;
+function Modal({ isModal, resetModal, content }) {
 	return (
 		<CSSTransition
 			timeout={500}

@@ -2,18 +2,9 @@ import React, { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useModalContext } from "../contexts/ModalContext";
 
-function FeaturedContent({
-	featuredImgs,
-	// featuredImg2,
-	// featuredImg3,
-	featuredText1,
-	featuredText2,
-}) {
-	const [animateFeature, setAnimateFeature] = useState(false);
+function FeaturedContent({ featuredImgs, featuredText1, featuredText2 }) {
 	const { isModal } = useModalContext();
-	// const [currIdx, setCurrIdx] = useState(0)
-	// const [imgArr, setImgArr] = useState([featuredImg1, featuredImg2, featuredImg3])
-	console.log(featuredImgs);
+	const [animateFeature, setAnimateFeature] = useState(false);
 	const [currImg, setCurrImg] = useState(featuredImgs[1]);
 	const [nextImg, setNextImg] = useState(featuredImgs[2]);
 	const [prevImg, setPrevImg] = useState(featuredImgs[0]);
@@ -37,7 +28,6 @@ function FeaturedContent({
 			setPrevImg(featuredImgs[prevImg.idx + 1]);
 		}
 	};
-
 
 	const decrementCarousel = () => {
 		if (nextImg.idx === 0) {

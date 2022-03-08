@@ -1,16 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import FadeUp from "../animations/FadeUp";
 import { Link } from "react-router-dom";
 import { AttentionSeeker, Fade } from "react-awesome-reveal";
 import projectData from "../content/content.js";
 import Project from "../components/Project";
 
-
 const Home = () => {
-	const [featuredProjects, setFeaturedProjects] = useState([projectData[0], projectData[1], projectData[2]])
+	const [featuredProjects, setFeaturedProjects] = useState([
+		projectData[0],
+		projectData[1],
+		projectData[2],
+	]);
 
 	return (
-		<div class="main-container">
+		<div className="main-container">
 			<section className="section-1">
 				<div className="section-container">
 					<FadeUp duration={1000} triggerOnce={true} fraction={1}>
@@ -73,25 +76,21 @@ const Home = () => {
 							delay={500}
 						>
 							{featuredProjects.map((project, idx) => (
-							<Project
-								key={idx}
-								imgSrc={project.imgSrc}
-								alt={project.alt}
-								title={project.title}
-								description={project.description}
-								stack={project.stack}
-								liveLink={project.liveLink}
-								codeLink={project.codeLink}
-								isFeatured={project.isFeatured}
-								featuredImg1={project.featuredImg1}
-								featuredImg2={project.featuredImg2}
-								featuredImg3={project.featuredImg3}
-								featuredText1={project.featuredText1}
-								featuredText2={project.featuredText2}
-								
-							/>
-						))}
-							
+								<Project
+									key={idx}
+									imgSrc={project.imgSrc}
+									alt={project.alt}
+									title={project.title}
+									description={project.description}
+									stack={project.stack}
+									liveLink={project.liveLink}
+									codeLink={project.codeLink}
+									isFeatured={project.isFeatured}
+									featuredImgs={project.featuredImgs}
+									featuredText1={project.featuredText1}
+									featuredText2={project.featuredText2}
+								/>
+							))}
 						</Fade>
 					</ul>
 					<div className="flex-center-container">
@@ -99,13 +98,12 @@ const Home = () => {
 							<AttentionSeeker
 								effect="tada"
 								triggerOnce
-								delay={1500}
+								delay={0}
 								fraction={1}
 							>
 								<Link to={"/work"} className="btn secondary">
 									View all
 								</Link>
-								{/* <a className="btn secondary">View all</a> */}
 							</AttentionSeeker>
 						</Fade>
 					</div>
