@@ -13,9 +13,9 @@ function Work() {
 			<Modal isModal={isModal} setIsModal={setIsModal} />
 
 			<div className="section-container page-container">
-				<FadeUp duration={1000} triggerOnce={true} fraction={1}>
-					<h1 className="section-title">
-						Here are some of the things I've made
+				<FadeUp duration={1000} triggerOnce={true} fraction={0}>
+					<h1 className="section-title work-section-title">
+						Click the green details button to read more
 					</h1>
 				</FadeUp>
 				<ul className="project-list">
@@ -25,7 +25,8 @@ function Work() {
 						triggerOnce
 						direction="up"
 						duration={500}
-						// delay={750}
+						delay={800}
+						fraction={0}
 					>
 						{projectData.map((project, idx) => (
 							<Project

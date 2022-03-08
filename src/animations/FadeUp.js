@@ -48,7 +48,7 @@ function FadeUp({
 			duration={duration}
 			triggerOnce={triggerOnce}
 			keyframes={customAnimation2}
-			fraction={fraction}
+			fraction={0}
 			cascade={cascade}
 			damping={damping}
 			direction={direction}
