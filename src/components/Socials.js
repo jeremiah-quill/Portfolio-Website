@@ -3,7 +3,7 @@ import React from "react";
 function Socials() {
 	return (
 		<div className="socials-container-top">
-			<a href="www.linkedin.com/in/jeremiah-quill-281b06122" target="_blank">
+			<a href="https://www.linkedin.com/in/jeremiah-quill-281b06122" target="_blank">
 				<svg
 					className="icon"
 					viewBox="0 0 96 92"
