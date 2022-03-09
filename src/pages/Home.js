@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { AttentionSeeker, Fade } from "react-awesome-reveal";
 import projectData from "../content/content.js";
 import Project from "../components/Project";
+import Contact from "../components/Contact";
+import Socials from "../components/Socials";
 
 const Home = () => {
 	const [featuredProjects, setFeaturedProjects] = useState([
@@ -28,11 +30,8 @@ const Home = () => {
 							I'm Jeremiah Quill
 						</h1>
 						<h2 className="sub-title">Front-end developer</h2>
-						<div className="socials-container-top">
-							<img className="gray-icon" src="./images/github-logo.svg" />
-							<img className="gray-icon" src="./images/linkedin-logo.svg" />
-							<img className="gray-icon" src="./images/spotify-logo-gray.svg" />
-						</div>
+						<Socials />
+
 						<div className="bio-with-image">
 							<img className="bio-img" src="./images/bio-img-compress.png" />
 							<p className="bio">
@@ -59,9 +58,13 @@ const Home = () => {
 								yourself and find success in your passions.
 								<br></br>
 								<br></br>
-								I'm currently available for <span className="accent-orange-text">freelance opportunities</span>, <span className="accent-orange-text">contract
-								roles</span>, or <span className="accent-orange-text">full time positions</span>. Please reach out, I would love to
-								hear from you!
+								I'm currently available for{" "}
+								<span className="accent-orange-text">
+									freelance opportunities
+								</span>
+								, <span className="accent-orange-text">contract roles</span>, or{" "}
+								<span className="accent-orange-text">full time positions</span>.
+								Please reach out, I would love to hear from you!
 							</p>
 						</div>
 					</FadeUp>
@@ -74,7 +77,7 @@ const Home = () => {
 						triggerOnce={true}
 						fraction={0}
 						cascade={true}
-						damping={.1}
+						damping={0.1}
 					>
 						<h1 className="section-title">
 							I'm constantly adding to my toolbox of skills
@@ -107,7 +110,7 @@ const Home = () => {
 										fraction={0}
 									>
 										<li className="pill">HTML</li>
-										<li className="pill">CSS</li>					
+										<li className="pill">CSS</li>
 										<li className="pill">Javascript</li>
 										<li className="pill">React</li>
 										<li className="pill">React Transition Group</li>
@@ -160,105 +163,19 @@ const Home = () => {
 						</Fade>
 					</ul>
 					<div className="flex-center-container">
-						<Fade direction="up" delay={600} triggerOnce fraction={0}>
+						<Fade direction="up" delay={0} triggerOnce fraction={0}>
 							{/* <AttentionSeeker effect="tada" triggerOnce delay={0} fraction={0}> */}
-								<Link to={"/work"} className="btn secondary">
-									View all
-								</Link>
+							<Link to={"/work"} className="btn secondary">
+								View all
+							</Link>
 							{/* </AttentionSeeker> */}
 						</Fade>
 					</div>
 				</div>
+				<Contact />
 				{/* </section> */}
 				{/* <section className="section-8"> */}
-				<div className="section-container">
-					<FadeUp triggerOnce duration={1000} fraction={0}>
-						<h1 className="section-title">
-							Want to collaborate, have an open role, or just want to get in
-							touch?
-						</h1>
-					</FadeUp>
-					<form className="contact-form">
-						<div className="input-group">
-							<Fade
-								cascade={true}
-								damping={0.25}
-								triggerOnce
-								direction="up"
-								duration={500}
-								delay={750}
-								fraction={0}
-							>
-								<label>First Name</label>
-								<input
-									className="underline-input"
-									placeholder="John"
-									type="text"
-								/>
-							</Fade>
-						</div>
 
-						<div className="input-group">
-							<Fade
-								cascade={true}
-								damping={0.25}
-								triggerOnce
-								direction="up"
-								duration={500}
-								fraction={0}
-								delay={1000}
-							>
-								<label>Last Name</label>
-								<input
-									className="underline-input"
-									placeholder="Smith"
-									type="text"
-								/>
-							</Fade>
-						</div>
-
-						<div className="input-group">
-							<Fade
-								cascade={true}
-								damping={0.25}
-								triggerOnce
-								direction="up"
-								duration={500}
-								fraction={0}
-								delay={1250}
-							>
-								<label>Email</label>
-								<input
-									className="underline-input"
-									placeholder="tech-person@tech.com"
-									type="email"
-								/>
-							</Fade>
-						</div>
-						<div className="input-group">
-							<Fade
-								cascade={true}
-								damping={0.25}
-								triggerOnce
-								direction="up"
-								duration={500}
-								fraction={0}
-								delay={1500}
-							>
-								<label>Message</label>
-								<textarea
-									className="underline-input"
-									placeholder="let's make something cool together!"
-								></textarea>
-							</Fade>
-						</div>
-						<div className="flex-center-container">
-							<Fade direction="up" delay={1750} fraction={0} triggerOnce>
-								<input className="btn secondary input-submit" type="submit" />
-							</Fade>
-						</div>
-					</form>
-				</div>
 				{/* </section> */}
 			</div>
 		</div>
