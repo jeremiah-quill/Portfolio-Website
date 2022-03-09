@@ -15,7 +15,7 @@ function Work() {
 			<div className="section-container page-container">
 				<FadeUp duration={1000} triggerOnce={true} fraction={0}>
 					<h1 className="section-title work-section-title">
-						Click the green details button to read more
+						Things I've spent the most time on
 					</h1>
 				</FadeUp>
 				<ul className="project-list">

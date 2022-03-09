@@ -17,10 +17,26 @@ function Project({
 }) {
 	const { configureModal } = useModalContext();
 
+	const handleClick = (e) => {
+		if(e.target.classList.contains("project-link")) return
+		if (isFeatured) {
+			configureModal(
+				<FeaturedContent
+					featuredImgs={featuredImgs}
+					featuredText1={featuredText1}
+					featuredText2={featuredText2}
+				/>
+			);
+		}
+	};
+
 	return (
-		<li className="project">
+		<li
+		onClick={handleClick}
+			className={`project ${isFeatured ? "featured" : ""}`}
+		>
 			{isFeatured ? (
-				<button
+				<div
 					className="expand"
 					onClick={() =>
 						configureModal(
@@ -33,11 +49,11 @@ function Project({
 					}
 				>
 					Details
-				</button>
+				</div>
 			) : (
 				""
 			)}
-			<div className="image-container">
+			<div onClick={handleClick} className={`image-container ${isFeatured ? "featured" : ""}`}>
 				<img src={imgSrc} alt={alt} />
 			</div>
 			<h2 className="project-title">{title}</h2>

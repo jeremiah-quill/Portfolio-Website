@@ -10,6 +10,7 @@ function Header() {
 			<nav>
 				<Link to="/">Home</Link>
 				<Link to="/work">Work</Link>
+				<Link to="/work">About</Link>
 			</nav>
 		</header>
 	);

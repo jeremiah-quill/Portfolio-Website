@@ -9,12 +9,14 @@ export default function ModalProvider({ children }) {
 	const [modalContent, setModalContent] = useState(null);
 
 	const resetModal = () => {
+		document.body.style.overflowY = "scroll";
 		setIsModal(false)
 		// setModalContent(null)
 	}
 
 	const configureModal = (content) => {
 		setIsModal(true);
+		document.body.style.overflowY = "hidden";
 		setModalContent(content);
 	};
 

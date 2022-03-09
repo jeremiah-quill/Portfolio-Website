@@ -25,8 +25,9 @@ const Home = () => {
 						damping={0.1}
 					>
 						<h1 className="section-title main-section-title">
-							I'm Jeremiah Quill - front end developer
+							I'm Jeremiah Quill
 						</h1>
+						<h2 className="sub-title">Front-end developer</h2>
 						<div className="socials-container-top">
 							<img className="gray-icon" src="./images/github-logo.svg" />
 							<img className="gray-icon" src="./images/linkedin-logo.svg" />
@@ -58,8 +59,8 @@ const Home = () => {
 								yourself and find success in your passions.
 								<br></br>
 								<br></br>
-								I'm currently available for freelance opportunities, contract
-								roles, or full time roles. Please reach out, I would love to
+								I'm currently available for <span className="accent-orange-text">freelance opportunities</span>, <span className="accent-orange-text">contract
+								roles</span>, or <span className="accent-orange-text">full time positions</span>. Please reach out, I would love to
 								hear from you!
 							</p>
 						</div>
@@ -69,69 +70,72 @@ const Home = () => {
 				{/* <section className="section-2"> */}
 				<div className="section-container">
 					<FadeUp
-					duration={1000}
-					triggerOnce={true}
-					fraction={0}
-					// cascade={true}
-					damping={0}
-				>
-					<h1 className="section-title">
-						I'm constantly adding to my toolbox of skills.
-					</h1>
-					<div className="skills-container">
-						<p className="skills-description">
-							The modern web is always changing, so I am always learning. I
-							enjoy fiddling with different tools across the web and finding the
-							right fits for my development style, but I am also versatile. If a
-							job is best served with a certain set of technologies, then I will
-							make sure to take the time and dive deep when necessary.
-							<br></br>
-							<br></br>
-							I'm currently teaching myself{" "}
-							<span className="important-text">Gatsby</span>,{" "}
-							<span className="important-text">Figma</span>, and{" "}
-							<span className="important-text">Sass</span>.
-						</p>
-						<ul className="skill-list">
-							<Fade
-								delay={1000}
-								cascade={true}
-								damping={0.25}
-								triggerOnce
-								direction="up"
-								duration={500}
-								fraction={0}
-							>
-								<li className="pill">HTML</li>
-								<li className="pill">CSS</li>
-								<li className="pill">Javascript</li>
-								<li className="pill">React</li>
-								<li className="pill">React Transition Group</li>
-								<li className="pill">React Router</li>
-								<li className="pill">Mobile Design</li>
-								<li className="pill">NodeJS</li>
-								<li className="pill">MongoDB</li>
-								<li className="pill">Heroku</li>
-								<li className="pill">Express</li>
-								<li className="pill">GraphQL</li>
-								<li className="pill">Apollo Client</li>
-							</Fade>
-						</ul>
-					</div>
+						duration={1000}
+						triggerOnce={true}
+						fraction={0}
+						cascade={true}
+						damping={.1}
+					>
+						<h1 className="section-title">
+							I'm constantly adding to my toolbox of skills
+						</h1>
+						<div className="skills-container">
+							<p className="skills-description">
+								The modern web is always changing, so I am always learning. I
+								enjoy fiddling with different tools across the web and finding
+								the right fits for my development style, but I am also
+								versatile. If a job is best served with a certain set of
+								technologies, then I will make sure to take the time and dive
+								deep when necessary.
+								<br></br>
+								<br></br>
+								I'm currently teaching myself{" "}
+								<span className="important-text">Gatsby</span>,{" "}
+								<span className="important-text">Figma</span>, and{" "}
+								<span className="important-text">Sass</span>.
+							</p>
+							<div>
+								<h3 className="what-im-good-at">What I'm good at</h3>
+								<ul className="skill-list">
+									<Fade
+										delay={1000}
+										cascade={true}
+										damping={0.25}
+										triggerOnce
+										direction="up"
+										duration={500}
+										fraction={0}
+									>
+										<li className="pill">HTML</li>
+										<li className="pill">CSS</li>					
+										<li className="pill">Javascript</li>
+										<li className="pill">React</li>
+										<li className="pill">React Transition Group</li>
+										<li className="pill">React Router</li>
+										<li className="pill">Mobile Design</li>
+										<li className="pill">NodeJS</li>
+										<li className="pill">MongoDB</li>
+										<li className="pill">Heroku</li>
+										<li className="pill">Express</li>
+										<li className="pill">GraphQL</li>
+										<li className="pill">Apollo Client</li>
+									</Fade>
+								</ul>
+							</div>
+						</div>
 					</FadeUp>
-
 				</div>
 				{/* </section> */}
 				{/* <section className="section-3"> */}
 				<div className="section-container">
 					<FadeUp duration={1000} triggerOnce={true} fraction={0}>
-						<h1 className="section-title">Featured Work</h1>
+						<h1 className="section-title">Take a look at my featured work</h1>
 					</FadeUp>
 					<ul className="project-list">
 						<Fade
 							triggerOnce={true}
 							cascade={true}
-							damping={0.25}
+							damping={0.1}
 							direction="up"
 							duration={500}
 							fraction={0}
@@ -156,12 +160,12 @@ const Home = () => {
 						</Fade>
 					</ul>
 					<div className="flex-center-container">
-						<Fade delay={1000} triggerOnce fraction={0}>
-							<AttentionSeeker effect="tada" triggerOnce delay={0} fraction={0}>
+						<Fade direction="up" delay={600} triggerOnce fraction={0}>
+							{/* <AttentionSeeker effect="tada" triggerOnce delay={0} fraction={0}> */}
 								<Link to={"/work"} className="btn secondary">
 									View all
 								</Link>
-							</AttentionSeeker>
+							{/* </AttentionSeeker> */}
 						</Fade>
 					</div>
 				</div>

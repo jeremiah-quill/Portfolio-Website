@@ -6,20 +6,14 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 import Modal from "./components/Modal";
 import { Routes, Route } from "react-router-dom";
-import {useModalContext} from './contexts/ModalContext'
+import { useModalContext } from "./contexts/ModalContext";
 
 function App() {
 	const { isModal, resetModal, modalContent } = useModalContext();
 
 	return (
 		<div className="App">
-
-			<Modal
-				isModal={isModal}
-				resetModal={resetModal}
-				content={modalContent}
-			/>
-			
+			<Modal isModal={isModal} resetModal={resetModal} content={modalContent} />
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
