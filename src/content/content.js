@@ -15,9 +15,9 @@ const projectData = [
 			{ img: "./images/fwm-student-view.png", idx: 2 },
 		],
 		featuredText1:
-			"Flow with Megmo is a full stack landing page and web app built for a yoga instructor who is beginning an online yoga studio.  The client's goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes.  She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the client's published schedule.  Requirements included mobile responsiveness, user authentication, an admin dashboard, a production database, and automated customer email communciation.  I built the client a custom admin dashboard where she is able to create, update, and delete the classes on her schedule through the Zoom API.",
+			"Flow with Megmo is a full stack landing page and web app built for a yoga instructor who is beginning an online yoga studio.  The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes.  She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the client's published schedule.  Requirements included mobile responsiveness, user authentication, an admin dashboard, a production database, and automated customer email communciation.  I built a custom admin dashboard where the yoga teacher is able to create, update, and delete the classes on her schedule through the Zoom API.",
 		featuredText2:
-			"The product was built with the MERN stack and leverages Apollo/GraphQL to keep the database and UI in sync.  I configured Nodemailer to automate the sending of class links, class updates, and class confirmations to necessary students.  I also incorporated the Spotify API to pull in the client's spotify playlists used during class allowing her students to discover the music that inspired their workouts.  Flow with Megmo is deployed to Heroku and I continue to provide developmental support.",
+			"The app was built with the MERN stack and leverages Apollo/GraphQL to keep the database and UI in sync.  I configured Nodemailer to automate the sending of class links, class updates, and class confirmations to necessary students.  I also incorporated the Spotify API to pull in the client's spotify playlists used during class allowing her students to discover the music that inspired their workouts.  Flow with Megmo is deployed to Heroku and I continue to provide developmental support.",
 	},
 	{
 		imgSrc: "./images/wishlist.png",
@@ -84,7 +84,7 @@ const projectData = [
 		alt: "room homepage screenshot",
 		title: "E-commerce Homepage",
 		description:
-			"A mock up of an e-commerce landing page. Created to practice my React and CSS skills by accurately reproducing a JPG design with mobile responsiveness.",
+			"A prototype for a mobile responsive e-commerce landing page.",
 		stack: "React, HTML, CSS",
 		liveLink: "https://jeremiah-quill.github.io/room-homepage/",
 		codeLink: "https://github.com/jeremiah-quill/room-homepage",
@@ -94,7 +94,7 @@ const projectData = [
 		alt: "e-commerce product page screenshot",
 		title: "E-Commerce Product",
 		description:
-			"A mock up of an e-commerce product page with limited functionality. Created to practice my React and CSS skills by accurately reproducing a JPG design.",
+			"A prototype of a mobile responsive e-commerce product page.",
 		stack: "React, HTML, CSS",
 		liveLink: "https://jeremiah-quill.github.io/react-product-page/",
 		codeLink: "https://github.com/jeremiah-quill/react-product-page",
@@ -104,7 +104,7 @@ const projectData = [
 		alt: "Manage SaaS product screenshot",
 		title: "SaaS Landing Page",
 		description:
-			"A mock up of a SaaS product landing page. Created to practice my CSS (specifically layout and responsiveness) skills by accurately reproducing a JPG design.",
+			"A prototype of a mobile responsive SaaS product landing page.",
 		stack: "HTML, CSS",
 		liveLink: "https://jeremiah-quill.github.io/manage-landing-page/",
 		codeLink: "https://github.com/jeremiah-quill/manage-landing-page",
