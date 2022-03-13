@@ -64,10 +64,10 @@ function Project({
 			<p>{description}</p>
 			<p>Stack: {stack}</p>
 			<div className="project-link-container">
-				<a className="project-link primary" href={liveLink} target="_blank">
+				<a className="project-link primary" href={liveLink} target="_blank"  rel="noreferrer">
 					View Live
 				</a>
-				<a className="project-link" href={codeLink} target="_blank">
+				<a className="project-link" href={codeLink} target="_blank"  rel="noreferrer">
 					View Github
 				</a>
 			</div>

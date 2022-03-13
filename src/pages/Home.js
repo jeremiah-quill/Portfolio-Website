@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FadeUp from "../animations/FadeUp";
 import { Link } from "react-router-dom";
-import { AttentionSeeker, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import projectData from "../content/content.js";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
@@ -33,7 +33,7 @@ const Home = () => {
 						<Socials />
 
 						<div className="bio-with-image">
-							<img className="bio-img" src="./images/bio-img-compress.png" />
+							<img className="bio-img" src="./images/bio-img-compress.png" alt="Jeremiah with his son"/>
 							<p className="bio">
 								I'm currently a freelance full stack developer with a wide range
 								of skills and a passion for learning. I am mostly self-taught
@@ -66,6 +66,7 @@ const Home = () => {
 								<span className="accent-orange-text">full time positions</span>.
 								Please reach out, I would love to hear from you!
 							</p>
+							
 						</div>
 					</FadeUp>
 				</div>

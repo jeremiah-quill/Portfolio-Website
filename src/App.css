@@ -423,6 +423,7 @@ label {
 	align-items: center;
 	width: 100%;
 	margin-top: 2em;
+	flex-direction: column;
 }
 
 .detail-image-1 {
@@ -463,6 +464,7 @@ label {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transform-origin: center;
 	transition: filter 250ms ease;
+	margin: .5em 0;
 
 }
 
@@ -480,6 +482,51 @@ label {
 .reset-modal-icon {
 	width: 50px;
 	height: 50px;
+}
+
+
+
+@media screen and (min-width: 1150px) {
+	.detail-content-container {
+		width: 75%;
+		padding-top: 2em;
+	}
+
+	.detail-image { 
+		width: 40%;
+	}
+
+	.section-title {
+		font-size: 75px;
+	}
+
+	.skills-description {
+		width: 600px;
+		margin-right: 2em;
+	}
+
+	.skills-container {
+		flex-direction: row;
+	}
+
+
+.detail-image {
+	/* position: relative;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transform-origin: center;
+	transition: filter 250ms ease; */
+	margin: 0;
+
+}
+
+.detail-image-container {
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 2em; */
+	flex-direction: row;
 }
 
 /* Animations */
@@ -530,28 +577,6 @@ label {
 	transition: transform 500ms ease;
 }
 
-@media screen and (min-width: 1150px) {
-	.detail-content-container {
-		width: 75%;
-		padding-top: 2em;
-	}
-
-	.detail-image { 
-		width: 40%;
-	}
-
-	.section-title {
-		font-size: 75px;
-	}
-
-	.skills-description {
-		width: 600px;
-		margin-right: 2em;
-	}
-
-	.skills-container {
-		flex-direction: row;
-	}
 }
 
 /* Modal backdrop */

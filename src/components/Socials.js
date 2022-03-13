@@ -3,7 +3,7 @@ import React from "react";
 function Socials() {
 	return (
 		<div className="socials-container-top">
-			<a href="https://www.linkedin.com/in/jeremiah-quill-281b06122" target="_blank">
+			<a href="https://www.linkedin.com/in/jeremiah-quill-281b06122" target="_blank" rel="noreferrer">
 				<svg
 					className="icon"
 					viewBox="0 0 96 92"
@@ -15,10 +15,8 @@ function Socials() {
 						fill="#BBBBBB"
 					/>
 				</svg>
-
-				{/* <img className="icon" src="./images/linkedin-gray.svg" /> */}
 			</a>
-			<a href="https://github.com/jeremiah-quill" target="_blank">
+			<a href="https://github.com/jeremiah-quill" target="_blank" rel="noreferrer">
 				<svg
 					className="icon"
 					viewBox="0 0 204 199"
@@ -30,12 +28,11 @@ function Socials() {
 						fill="#BBBBBB"
 					/>
 				</svg>
-
-				{/* <img className="icon" src="./images/github-gray.svg" /> */}
 			</a>
 			<a
 				href="https://open.spotify.com/user/jcq5010?si=a2a0951141be4a8f"
 				target="_blank"
+				rel="noreferrer"
 			>
 				<svg
 					className="icon"
@@ -48,8 +45,6 @@ function Socials() {
 						fill="#BBBBBB"
 					/>
 				</svg>
-
-				{/* <img className="icon" src="./images/spotify-gray.svg" /> */}
 			</a>
 		</div>
 	);
