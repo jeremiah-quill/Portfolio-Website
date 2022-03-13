@@ -6,6 +6,7 @@ import projectData from "../content/content.js";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
 import Socials from "../components/Socials";
+import CustomLink from "../components/CustomLink";
 
 const Home = () => {
 	const [featuredProjects, setFeaturedProjects] = useState([
@@ -166,9 +167,11 @@ const Home = () => {
 					<div className="flex-center-container">
 						<Fade direction="up" delay={0} triggerOnce fraction={0}>
 							{/* <AttentionSeeker effect="tada" triggerOnce delay={0} fraction={0}> */}
-							<Link to={"/work"} className="btn secondary">
+							{/* <Link to={"/work"} className="btn secondary">
 								View all
-							</Link>
+							</Link> */}
+							<CustomLink to="/work" className="btn secondary">View all</CustomLink>
+
 							{/* </AttentionSeeker> */}
 						</Fade>
 					</div>
