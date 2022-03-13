@@ -10,9 +10,13 @@ const projectData = [
 		codeLink: "https://github.com/jeremiah-quill/flow-with-megmo",
 		isFeatured: true,
 		featuredImgs: [
-			{ img: "./images/fwm-landing-page.png", idx: 0 },
-			{ img: "./images/fwm-admin-view.png", idx: 1 },
-			{ img: "./images/fwm-student-view.png", idx: 2 },
+			{ img: "./images/admin-dashboard-view-min.png", idx: 0 },
+			{ img: "./images/fwm-hero-view-min.png", idx: 1 },
+			{ img: "./images/register-class-view-min.png", idx: 2 },
+			{ img: "./images/dashboard-view-min.png", idx: 3 },
+			{ img: "./images/playlist-selection-view-min.png", idx: 4 },
+			{ img: "./images/create-class-view-min.png", idx: 5 },
+
 		],
 		featuredText1:
 			"Flow with Megmo is a full stack landing page and web app built for a yoga instructor who is beginning an online yoga studio.  The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes.  She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the client's published schedule.  Requirements included mobile responsiveness, user authentication, an admin dashboard, a production database, and automated customer email communciation.  I built a custom admin dashboard where the yoga teacher is able to create, update, and delete the classes on her schedule through the Zoom API.",

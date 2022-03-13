@@ -135,9 +135,6 @@ section {
 	font-family: "scada", arial;
 }
 
-@media screen and (min-width: 750px) {
-}
-
 .main-section-title {
 	padding-bottom: 0;
 	margin-top: 1.5em;
@@ -407,10 +404,6 @@ label {
 	overflow-y: scroll;
 }
 
-.modal {
-	overflow-y: scroll;
-}
-
 /* Featured content */
 
 .detail-image-container {
@@ -465,6 +458,52 @@ label {
 	height: 50px;
 }
 
+/* Modal backdrop */
+.modal-animate-enter > .modal-backdrop {
+	opacity: 0;
+}
+.modal-animate-enter.modal-animate-enter-active > .modal-backdrop {
+	opacity: 0.9;
+	transition: opacity 500ms ease;
+}
+.modal-animate-exit > .modal-backdrop {
+	opacity: 0.9;
+}
+.modal-animate-exit.modal-animate-exit-active > .modal-backdrop {
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+
+/* Modal backdrop */
+.modal-animate-enter > .modal-card {
+	opacity: 0;
+}
+.modal-animate-enter.modal-animate-enter-active > .modal-card {
+	opacity: 1;
+	transition: opacity 500ms ease;
+}
+.modal-animate-exit > .modal-card {
+	opacity: 1;
+}
+.modal-animate-exit.modal-animate-exit-active > .modal-card {
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+
+.icon {
+	width: 30px;
+	/* background: none; */
+	/* fill: lightgray; */
+}
+
+.icon > path {
+	transition: fill 200ms ease;
+}
+
+.socials-container-top > a > .icon:hover > path {
+	fill: white;
+}
+
 @media screen and (min-width: 1150px) {
 	.detail-content-container {
 		width: 75%;
@@ -494,6 +533,44 @@ label {
 
 	.detail-image-container {
 		flex-direction: row;
+	}
+
+	.section-container {
+		padding: 1em 3em;
+	}
+
+	.main-header {
+		padding: 1em 10em;
+	}
+
+	.inner-container {
+		max-width: 1400px;
+	}
+
+	.bio-with-image {
+		display: flex;
+	}
+
+	.bio-img {
+		order: 2;
+		margin: 0;
+		align-self: center;
+		margin-left: auto;
+		max-width: 500px;
+	}
+
+	.socials-container {
+		margin-bottom: 5em;
+	}
+
+	.bio {
+		/* margin-right: 5em; */
+		max-width: 500px;
+	}
+
+	p {
+		font-size: 20px;
+		/* font-family: arial; */
 	}
 
 	/* Animations */
@@ -553,90 +630,4 @@ label {
 	.detail-image-3:hover {
 		filter: brightness(50%);
 	}
-}
-
-/* Modal backdrop */
-.modal-animate-enter > .modal-backdrop {
-	opacity: 0;
-}
-.modal-animate-enter.modal-animate-enter-active > .modal-backdrop {
-	opacity: 0.9;
-	transition: opacity 500ms ease;
-}
-.modal-animate-exit > .modal-backdrop {
-	opacity: 0.9;
-}
-.modal-animate-exit.modal-animate-exit-active > .modal-backdrop {
-	opacity: 0;
-	transition: opacity 500ms ease;
-}
-
-/* Modal backdrop */
-.modal-animate-enter > .modal-card {
-	opacity: 0;
-}
-.modal-animate-enter.modal-animate-enter-active > .modal-card {
-	opacity: 1;
-	transition: opacity 500ms ease;
-}
-.modal-animate-exit > .modal-card {
-	opacity: 1;
-}
-.modal-animate-exit.modal-animate-exit-active > .modal-card {
-	opacity: 0;
-	transition: opacity 500ms ease;
-}
-
-@media screen and (min-width: 1150px) {
-	.section-container {
-		padding: 1em 3em;
-	}
-
-	.main-header {
-		padding: 1em 10em;
-	}
-
-	.inner-container {
-		max-width: 1400px;
-	}
-
-	.bio-with-image {
-		display: flex;
-	}
-
-	.bio-img {
-		order: 2;
-		margin: 0;
-		align-self: center;
-		margin-left: auto;
-		max-width: 500px;
-	}
-
-	.socials-container {
-		margin-bottom: 5em;
-	}
-
-	.bio {
-		/* margin-right: 5em; */
-		max-width: 500px;
-	}
-
-	p {
-		font-size: 20px;
-		/* font-family: arial; */
-	}
-}
-
-.icon {
-	width: 30px;
-	/* background: none; */
-	/* fill: lightgray; */
-}
-
-.icon > path {
-	transition: fill 200ms ease;
-}
-
-.socials-container-top > a > .icon:hover > path {
-	fill: white;
 }
