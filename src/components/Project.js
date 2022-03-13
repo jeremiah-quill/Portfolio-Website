@@ -1,5 +1,6 @@
 import React from "react";
 import { useModalContext } from "../contexts/ModalContext";
+import { useWidthContext } from "../contexts/WidthContext";
 import FeaturedContent from "./FeaturedContent";
 
 function Project({

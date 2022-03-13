@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useModalContext } from "../contexts/ModalContext";
+import {useWidthContext} from '../contexts/WidthContext'
 
 function FeaturedContent({ featuredImgs, featuredText1, featuredText2 }) {
 	const { isModal } = useModalContext();
+	const {width, breakpoint} = useWidthContext()
+
+
+
 	const [animateFeature, setAnimateFeature] = useState(false);
 	const [currImg, setCurrImg] = useState(featuredImgs[1]);
 	const [nextImg, setNextImg] = useState(featuredImgs[2]);
 	const [prevImg, setPrevImg] = useState(featuredImgs[0]);
 
 	const incrementCarousel = () => {
+		if(width < breakpoint) return
 		if (nextImg.idx === featuredImgs.length - 1) {
 			setCurrImg(featuredImgs[featuredImgs.length - 1]);
 			setNextImg(featuredImgs[0]);
@@ -30,6 +36,8 @@ function FeaturedContent({ featuredImgs, featuredText1, featuredText2 }) {
 	};
 
 	const decrementCarousel = () => {
+		if(width < breakpoint) return
+
 		if (nextImg.idx === 0) {
 			setCurrImg(featuredImgs[featuredImgs.length - 2]);
 			setNextImg(featuredImgs[featuredImgs.length - 1]);

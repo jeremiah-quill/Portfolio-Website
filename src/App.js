@@ -13,6 +13,7 @@ function App() {
 
 	return (
 		<div className="App">
+
 			<Modal isModal={isModal} resetModal={resetModal} content={modalContent} />
 			<Header />
 			<Routes>
