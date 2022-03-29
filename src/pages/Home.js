@@ -65,7 +65,7 @@ const Home = () => {
 								</span>
 								, <span className="accent-orange-text">contract roles</span>, or{" "}
 								<span className="accent-orange-text">full time positions</span>.
-								Please reach out, I would love to hear from you!
+								Please reach out @ <span className="accent-orange-text">jcq5010@gmail.com</span>, I would love to hear from you! 
 							</p>
 							
 						</div>

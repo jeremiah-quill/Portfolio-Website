@@ -143,6 +143,7 @@ function Contact() {
 						</button>
 					</div>
 				</form>
+				<div className="contact-note-container"><p>(or just email me @ <span className="accent-orange-text">jcq5010@gmail.com</span>)</p></div>
 			</FadeUp>
 		</div>
 	);

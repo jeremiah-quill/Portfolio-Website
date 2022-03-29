@@ -334,6 +334,13 @@ section {
 }
 
 /* Contact */
+.contact-note-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
 .underline-input {
 	background: none;
 	outline: none;
@@ -503,6 +510,13 @@ label {
 
 .socials-container-top > a > .icon:hover > path {
 	fill: white;
+}
+
+.not-found-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
 @media screen and (min-width: 1150px) {
