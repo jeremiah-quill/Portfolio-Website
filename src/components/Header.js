@@ -4,13 +4,10 @@ import CustomLink from "./CustomLink";
 
 function Header() {
 	return (
-		<header className="main-header">
+		<header className="flex items-center fixed bg-white w-full py-2 h-12 top-0">
 			<nav>
-				{/* <Link to="/">Home</Link>
-				<Link to="/work">Work</Link> */}
 				<CustomLink to="/">Home</CustomLink>
 				<CustomLink to="/work">Work</CustomLink>
-				{/* <Link to="/about">About</Link> */}
 			</nav>
 		</header>
 	);

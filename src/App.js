@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Modal from "./components/Modal";
 import { Routes, Route } from "react-router-dom";
 import { useModalContext } from "./contexts/ModalContext";
+import CaseStudy from "./components/CaseStudy/CaseStudy";
 
 function App() {
 	const { isModal, resetModal, modalContent } = useModalContext();
@@ -19,6 +20,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/work" element={<Work />} />
+				<Route path="/case-study/:projectName" element={<CaseStudy />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
