@@ -1,32 +1,15 @@
 import React from 'react';
 
-const CaseStudyFWM = () => {
+const CaseStudyWishlist = () => {
   const project = {
-    headerDetails: {
-      title: 'Flow with Megmo',
-      subtitle: 'Full Stack Marketing Page + Scheduling Tool',
-    },
-    technologies: [
-      'React',
-      'Express',
-      'NodeJS',
-      'Heroku',
-      'GraphQL',
-      'Apollo',
-      'React Router',
-      'React Transition Group',
-      'MongoDB',
-      'Mongoose',
-      'Bcrypt',
-      'Nodemailer',
-    ],
+    technologies: ['Express', 'NodeJS', 'Heroku', 'MySQL', 'Sequelize', 'Bcrypt', 'Nodemailer'],
   };
 
   return (
     <div>
       <div className="bg-blue-800 text-center py-32">
-        <h1 className="text-4xl mb-3">Flow with Megmo</h1>
-        <h2 className="text-xl">Full Stack Marketing Page + Scheduling Tool</h2>
+        <h1 className="text-4xl mb-3">Wishlist</h1>
+        <h2 className="text-xl">Full Stack Secret Santa Manager</h2>
         <div className="mt-10 flex justify-center gap-5">
           <button className="bg-black text-white py-2 px-5 rounded">Live</button>
           <button className="bg-black text-white py-2 px-5 rounded">Repo</button>
@@ -34,19 +17,19 @@ const CaseStudyFWM = () => {
       </div>
       <div className="p-5 max-w-screen-md m-auto flex flex-col gap-20 my-20">
         <div>
-          <img className="rounded" src="./images/flow-with-megmo.png" />
+          <img className="rounded" src="./images/wishlist.png" />
         </div>
         <div>
           <h3 className="text-center m-5">Summary</h3>
           <p>
-            Flow with Megmo is a full stack landing page and dashboard scheduling tool I built for
-            my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build
-            a tool to help manage the process of scheduling, requesting payment, and handling any
-            communications regarding upcoming yoga classes. She needed her students to be able to
-            sign in as a user and register for class, where they would then be able to view and
-            interact with the client's published schedule. Requirements included mobile
-            responsiveness, user authentication, an admin dashboard, a production database, and
-            automated customer email communciation.
+            I worked in a team of 3 to design and develop a full stack app for managing secret santa
+            gift exchanges. Users are able to sign up or login, create or join a private group, and
+            maintain an updated wishlist of gift ideas. Once a group is ready, the leader is able to
+            randomize the choosing of secret santas and each person’s wishlist is shared only with
+            their secret santa. We focused on user experience, automation, and mobile
+            responsiveness. I took on a leadership role in the team organizing planning sessions,
+            constantly re-aligning on the status of features, and making sure our goals were going
+            to be met.
           </p>
         </div>
         <div>
@@ -57,7 +40,7 @@ const CaseStudyFWM = () => {
             ))}
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h3 className="text-center m-5">Approach</h3>
           <p>
             My first steps were writing out a list of potential features with my wife and narrowing
@@ -82,40 +65,34 @@ const CaseStudyFWM = () => {
             I decided to create both a modal and toast contexts where I could pass in different
             forms, lists, and error/success notifications
           </p>
-        </div>
-        {/* <CaseStudyExamples /> */}
+        </div> */}
         <div>
-          <img className="rounded mb-5" src="./images/admin-dashboard-view-min.png" />
+          <img className="rounded mb-5" src="./images/wishlist-featured-1.png" />
           <p className="text-xs text-left m-auto px-5">
-            The admin dashboard is where my wife has control over her scheduled and completed
-            classes.
+            On the personal dashboard page users are able to add gifts to their wishlist, as well as
+            create or view groups.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/create-class-view-min.png" />
+          <img className="rounded mb-5" src="./images/wishlist-featured-2.png" />
           <p className="text-xs text-left m-auto px-5">
-            Selecting and submitting class details through a form within the model context.
-            Submitting this form creates a zoom meeting and adds the class to the public schedule.
+            The create group form, where a user is able to create a new secret santa group. Once
+            created, the group owner will be able to share a group password so others are able to
+            join.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/dashboard-view-min.png" />
+          <img className="rounded mb-5" src="./images/wishlist-featured-3.png" />
           <p className="text-xs text-left m-auto px-5">
-            On the student dashboard user's can view, sign up for, and cancel classes that appear on
-            the public schedule.
+            The group dashboard is only available to the user who created the group. It contains
+            editable group details like name, date, and price limit. It also contains an ID and
+            password that when shared with other users, allows them to join the group. Lastly, this
+            page includes a draw names button which randomly matches every member of the group
+            together.
           </p>
         </div>
-        <div>
-          <img className="rounded mb-5" src="./images/register-class-view-min.png" />
-          <p className="text-xs text-left m-auto px-5">
-            After confirming registration for a class, students are shown a custom made QR code
-            which sends them to a payment to my wife's venmo, pre-configured with the corresponding
-            class fee. We decided against using a payment processor to reduce costs due to this
-            being a side hobby for my wife, and rely on the honor system for user's to send payment.
-          </p>
-        </div>
-        {/* <CaseStudyConclusions /> */}
-        <div>
+        <div className="text-center">More to come!</div>
+        {/* <div>
           <h3 className="text-center mb-5">Conclusions</h3>
           <div>
             <p>
@@ -157,10 +134,10 @@ const CaseStudyFWM = () => {
               </li>
             </ol>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default CaseStudyFWM;
+export default CaseStudyWishlist;
