@@ -1,12 +1,22 @@
 import React from 'react';
 
-const CaseStudyFWM = () => {
+const CaseStudy = () => {
+  const project = {
+    headerDetails: {
+      title: 'Flow with Megmo',
+      subtitle: 'Full Stack Marketing Page + Scheduling Tool',
+    },
+    summary:
+      "Flow with Megmo is a full stack landing page and dashboard scheduling tool I built for my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes. She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the client's published schedule. Requirements included mobile responsiveness, user authentication, an admin dashboard, a production database, and automated customer email communciation.",
+    approach:
+      'My first steps were writing out a list of potential features with my wife and narrowing those down to what she wanted most. We decided on user authentication, a simple payment flow, a teacher dashboard where she could create and manage zoom classes on a public schedule, and a student dashboard where users could sign up for and cancel classes on this schedule. I then focused on the bulk of the backend tasks as I wanted to have a solid foundation for which I built my frontend. I mapped out how the database models would be structured, and since I knew I wanted to use GraphQL and Apollo from the beginning, I setup the queries and mutations that I knew I would need. I also setup routes to handle interacting with the Zoom API. Using the Zoom API was a lot more challenging than I had anticipated due to the lack of developer friendly documentation at the time. The majority of my time spent on the frontend of this app was handling side effects of user actions. My wife wanted to create classes, delete classes, update date and times for classes, as well as adding her music playlist for each compelted class. Students needed to be able to register for classes, cancel classes, and view playlists for completed classes. I believe in giving the user feedback on meaningful user actions, so I decided to create both a modal and toast contexts where I could pass in different forms, lists, and error/success notifications.',
+  };
+
   return (
     <div>
-      {/* <CaseStudyHeader /> */}
       <div className="bg-blue-800 text-center py-32">
-        <h1 className="text-4xl mb-3">Flow with Megmo</h1>
-        <h2 className="text-xl">Full Stack Marketing Page + Scheduling Tool</h2>
+        <h1 className="text-4xl mb-3">{project.headerDetails.title}</h1>
+        <h2 className="text-xl">{project.headerDetails.subtitle}</h2>
         <div className="mt-10 flex justify-center gap-5">
           <button className="bg-black text-white py-2 px-5 rounded">Live</button>
           <button className="bg-black text-white py-2 px-5 rounded">Repo</button>
@@ -16,19 +26,9 @@ const CaseStudyFWM = () => {
         <div>
           <img className="rounded" src="./images/flow-with-megmo.png" />
         </div>
-        {/* <CaseStudySummary /> */}
         <div>
           <h3 className="text-center m-5">Summary</h3>
-          <p>
-            Flow with Megmo is a full stack landing page and dashboard scheduling tool I built for
-            my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build
-            a tool to help manage the process of scheduling, requesting payment, and handling any
-            communications regarding upcoming yoga classes. She needed her students to be able to
-            sign in as a user and register for class, where they would then be able to view and
-            interact with the client's published schedule. Requirements included mobile
-            responsiveness, user authentication, an admin dashboard, a production database, and
-            automated customer email communciation.
-          </p>
+          <p>{project.summary}</p>
         </div>
         {/* <CaseStudyTech /> */}
         <div>
@@ -48,31 +48,9 @@ const CaseStudyFWM = () => {
             <li className="px-3 py-1 bg-white text-black rounded-3xl">Nodemailer</li>
           </ul>
         </div>
-        {/* <CaseStudyApproach /> */}
         <div>
           <h3 className="text-center m-5">Approach</h3>
-          <p>
-            My first steps were writing out a list of potential features with my wife and narrowing
-            those down to what she wanted most. We decided on user authentication, a simple payment
-            flow, a teacher dashboard where she could create and manage zoom classes on a public
-            schedule, and a student dashboard where users could sign up for and cancel classes on
-            this schedule. I then focused on the bulk of the backend tasks as I wanted to have a
-            solid foundation for which I built my frontend. I mapped out how the database models
-            would be structured, and since I knew I wanted to use GraphQL and Apollo from the
-            beginning, I setup the queries and mutations that I knew I would need. I also setup
-            routes to handle interacting with the Zoom API. Using the Zoom API was a lot more
-            challenging than I had anticipated due to the lack of developer friendly documentation
-            at the time.
-            <br></br>
-            <br></br>
-            The majority of my time spent on the frontend of this app was handling side effects of
-            user actions. My wife wanted to create classes, delete classes, update date and times
-            for classes, as well as adding her music playlist for each compelted class. Students
-            needed to be able to register for classes, cancel classes, and view playlists for
-            completed classes. I believe in giving the user feedback on meaningful user actions, so
-            I decided to create both a modal and toast contexts where I could pass in different
-            forms, lists, and error/success notifications.
-          </p>
+          <p>{project.approach}</p>
         </div>
         {/* <CaseStudyExamples /> */}
         <div>
@@ -154,4 +132,4 @@ const CaseStudyFWM = () => {
   );
 };
 
-export default CaseStudyFWM;
+export default CaseStudy;

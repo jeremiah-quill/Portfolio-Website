@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 import Socials from '../components/Socials';
 import CustomLink from '../components/CustomLink';
 import About from '../components/About';
-import CaseStudyFWM from '../components/CaseStudy';
+import CaseStudy from '../components/CaseStudy';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div className="pt-12">
       {/* <About /> */}
-      <CaseStudyFWM />
+      <CaseStudy />
     </div>
     // <div className="main-container">
     // 	<div className="inner-container">
