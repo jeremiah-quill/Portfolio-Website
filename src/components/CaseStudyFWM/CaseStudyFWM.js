@@ -1,4 +1,5 @@
 import React from 'react';
+// import pic1 from './images/flow-with-megmo.png';
 
 const CaseStudyFWM = () => {
   const project = {
@@ -34,10 +35,10 @@ const CaseStudyFWM = () => {
       </div>
       <div className="p-5 max-w-screen-md m-auto flex flex-col gap-20 my-20">
         <div>
-          <img className="rounded" src="./images/flow-with-megmo.png" />
+          <img className="rounded" alt="flow with megmo" src="./images/flow-with-megmo.png" />
         </div>
         <div>
-          <h3 className="text-center m-5">Summary</h3>
+          <h3 className="text-center mb-5 text-2xl">Summary</h3>
           <p>
             Flow with Megmo is a full stack landing page and dashboard scheduling tool built in
             React. I built this website from scratch for my wife, a yoga instructor who is beginning
@@ -48,15 +49,17 @@ const CaseStudyFWM = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-center m-5">Technologies</h3>
+          <h3 className="text-center mb-5 text-2xl">Technologies</h3>
           <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
             {project.technologies.map((tech) => (
-              <li className="px-3 py-1 bg-white text-black rounded-3xl">{tech}</li>
+              <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
+                {tech}
+              </li>
             ))}
           </ul>
         </div>
         <div>
-          <h3 className="text-center m-5">Notable Features</h3>
+          <h3 className="text-center mb-5 text-2xl">Notable Features</h3>
           <ul className="flex flex-col items-center">
             <li>User authentication</li>
             <li>Admin dashboard</li>
@@ -67,7 +70,7 @@ const CaseStudyFWM = () => {
           </ul>
         </div>
         <div>
-          <h4 className="mb-3 text-center">Feature Spotlight: Admin dashboard</h4>
+          <h4 className="text-center mb-5 text-2xl">Feature Spotlight: Admin dashboard</h4>
           <p>
             Since my wife's classes are hosted through Zoom, the admin dashboard I built allows her
             to interact with the Zoom API to create, delete, and update Zoom meetings. Submitting
@@ -81,28 +84,44 @@ const CaseStudyFWM = () => {
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/admin-dashboard-view-min.png" />
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/admin-dashboard-view-min.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             The admin dashboard is where my wife has control over her scheduled and completed
             classes.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/create-class-view-min.png" />
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/create-class-view-min.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             Selecting and submitting class details through a form within the model context.
             Submitting this form creates a zoom meeting and adds the class to the public schedule.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/dashboard-view-min.png" />
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/dashboard-view-min.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             On the student dashboard user's can view, sign up for, and cancel classes that appear on
             the public schedule.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/register-class-view-min.png" />
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/register-class-view-min.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             After confirming registration for a class, students are shown a custom made QR code
             which sends them to a payment to my wife's venmo, pre-configured with the corresponding
@@ -111,7 +130,7 @@ const CaseStudyFWM = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-center mb-5">Key Takeaways</h3>
+          <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
           <div>
             <p>
               Overall I was happy with the version of Flow with Megmo that I presented to my class.
@@ -120,9 +139,9 @@ const CaseStudyFWM = () => {
               more than the end product itself, I am most proud of the lessons I've taken from the
               experience building it. A few of my takeaways:
             </p>
-            <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
+            <ul className="flex flex-col gap-5 mt-10 px-5 ">
               <li>
-                <h4 className="mb-3">Have a clear direction for every decision</h4>
+                <h4 className="mb-3 text-center">Have a clear direction for every decision</h4>
                 <p>
                   The night before my presentation I realized I wanted to separate out the static
                   sections into a landing page and keep the scheduling functionality on a separate
@@ -133,7 +152,7 @@ const CaseStudyFWM = () => {
                 </p>
               </li>
               <li>
-                <h4 className="mb-3">Don't underestimate the complexity of state</h4>
+                <h4 className="mb-3 text-center">Don't underestimate the complexity of state</h4>
                 <p>
                   When I originally planned out this project I did not expect the state management
                   to become so complex. Turns out keeping a dashboard and database in sync is hard!
@@ -142,7 +161,9 @@ const CaseStudyFWM = () => {
                 </p>
               </li>
               <li>
-                <h4 className="mb-3">Learn a component library or alternate styling solution</h4>
+                <h4 className="mb-3 text-center">
+                  Learn a component library or alternate styling solution
+                </h4>
                 <p>
                   I wrote plain CSS to style the entire landing page and dashboard, and I will
                   probably never do that again. To achieve a cohesive design and layout, I will
@@ -150,7 +171,7 @@ const CaseStudyFWM = () => {
                   styling solutions like SASS or Styled Components
                 </p>
               </li>
-            </ol>
+            </ul>
           </div>
         </div>
       </div>

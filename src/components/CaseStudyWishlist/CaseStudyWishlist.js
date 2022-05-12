@@ -20,7 +20,7 @@ const CaseStudyWishlist = () => {
           <img className="rounded" src="./images/wishlist.png" />
         </div>
         <div>
-          <h3 className="text-center m-5">Summary</h3>
+          <h3 className="text-center mb-5 text-2xl">Summary</h3>
           <p>
             Wishlist is a full stack app I built in Javascript with two other developers to help
             manage secret santa gift exchanges. Users can create and join groups, and create and
@@ -31,15 +31,17 @@ const CaseStudyWishlist = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-center m-5">Technologies</h3>
+          <h3 className="text-center mb-5 text-2xl">Technologies</h3>
           <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
             {project.technologies.map((tech) => (
-              <li className="px-3 py-1 bg-white text-black rounded-3xl">{tech}</li>
+              <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
+                {tech}
+              </li>
             ))}
           </ul>
         </div>
         <div>
-          <h3 className="text-center m-5">Notable Features</h3>
+          <h3 className="text-center mb-5 text-2xl">Notable Features</h3>
           <ul className="flex flex-col items-center">
             <li>User authentication</li>
             <li>Private groups</li>
@@ -48,7 +50,9 @@ const CaseStudyWishlist = () => {
           </ul>
         </div>
         <div>
-          <h4 className="mb-3 text-center">Feature Spotlight: Automated email reminders</h4>
+          <h4 className="text-center mb-5 text-2xl">
+            Feature Spotlight: Automated email reminders
+          </h4>
           <p>
             Each gift exchange group has an event date, and my goal was to send an email one week in
             advance of this date to users who have elected to receive notifications. I wrote a
@@ -87,29 +91,26 @@ const CaseStudyWishlist = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-center mb-5">Key Takeaways</h3>
-          <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
+          <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
+          <ul className="flex flex-col gap-5 mt-10 px-5">
             <li>
-              <h4 className="mb-3">Upfront planning and preparation are invaluable</h4>
+              <h4 className="mb-3 text-center">Planning and preparation are invaluable</h4>
               <p>
-                Fugiat ex sint enim deserunt ea est sint enim voluptate. In do cillum ut sunt mollit
-                deserunt est ea officia velit non quis. Cillum esse enim dolor minim. Aliqua magna
-                cupidatat qui deserunt anim enim duis labore et culpa voluptate ad. Irure dolore
-                Lorem ut dolor. Minim ipsum tempor veniam voluptate cupidatat et do et pariatur
-                cillum velit aliqua.
+                The biggest reason we were able to succeed in including all of the original features
+                we had intended is because of our up front planning and preparation. We discussed
+                our timeline, who would work on what, and why certain things were not viable for our
+                constraints.
               </p>
             </li>
             <li>
-              <h4 className="mb-3">Working on a team is a skill</h4>
+              <h4 className="mb-3 text-center">Working on a team is a skill</h4>
               <p>
-                Fugiat ex sint enim deserunt ea est sint enim voluptate. In do cillum ut sunt mollit
-                deserunt est ea officia velit non quis. Cillum esse enim dolor minim. Aliqua magna
-                cupidatat qui deserunt anim enim duis labore et culpa voluptate ad. Irure dolore
-                Lorem ut dolor. Minim ipsum tempor veniam voluptate cupidatat et do et pariatur
-                cillum velit aliqua.
+                Working on multiple branches in git, code reviewing, and collaboring on
+                decisionmaking are just a few of the important aspects I experienced building this
+                app.
               </p>
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
     </div>
