@@ -22,14 +22,12 @@ const CaseStudyWishlist = () => {
         <div>
           <h3 className="text-center m-5">Summary</h3>
           <p>
-            I worked in a team of 3 to design and develop a full stack app for managing secret santa
-            gift exchanges. Users are able to sign up or login, create or join a private group, and
-            maintain an updated wishlist of gift ideas. Once a group is ready, the leader is able to
-            randomize the choosing of secret santas and each person’s wishlist is shared only with
-            their secret santa. We focused on user experience, automation, and mobile
-            responsiveness. I took on a leadership role in the team organizing planning sessions,
-            constantly re-aligning on the status of features, and making sure our goals were going
-            to be met.
+            Wishlist is a full stack app I built in Javascript with two other developers to help
+            manage secret santa gift exchanges. Users can create and join groups, and create and
+            maintain a wishlist of gift ideas to be shared. Once a group is ready, the leader is
+            able to randomize the choosing of secret santas and each user’s wishlist is shared only
+            with their secret santa. I took a leadership role on the team and handled the business
+            logic on both the front and back end while my teammates handled routing and design.
           </p>
         </div>
         <div>
@@ -40,32 +38,29 @@ const CaseStudyWishlist = () => {
             ))}
           </ul>
         </div>
-        {/* <div>
-          <h3 className="text-center m-5">Approach</h3>
+        <div>
+          <h3 className="text-center m-5">Notable Features</h3>
+          <ul className="flex flex-col items-center">
+            <li>User authentication</li>
+            <li>Private groups</li>
+            <li>Personal wishlists</li>
+            <li>Automated email reminders</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="mb-3 text-center">Feature Spotlight: Automated email reminders</h4>
           <p>
-            My first steps were writing out a list of potential features with my wife and narrowing
-            those down to what she wanted most. We decided on user authentication, a simple payment
-            flow, a teacher dashboard where she could create and manage zoom classes on a public
-            schedule, and a student dashboard where users could sign up for and cancel classes on
-            this schedule. I then focused on the bulk of the backend tasks as I wanted to have a
-            solid foundation for which I built my frontend. I mapped out how the database models
-            would be structured, and since I knew I wanted to use GraphQL and Apollo from the
-            beginning, I setup the queries and mutations that I knew I would need. I also setup
-            routes to handle interacting with the Zoom API. Using the Zoom API was a lot more
-            challenging than I had anticipated due to the lack of developer friendly documentation
-            at the time.
+            Each gift exchange group has an event date, and my goal was to send an email one week in
+            advance of this date to users who have elected to receive notifications. I wrote a
+            function in our Express server that utilizes both a cron job and nodemailer to achieve
+            this. I used a package called node-cron which allowed me to schedule code to be executed
+            on the server. I configred the cron job to run every day at noon, which executes the
+            code within my function. This function fetches all groups from our database and checks
+            the event dates against the date one week in the future. Any group members who have
+            elected to receive reminders will receive an automated email configured through
+            Nodemailer once their event is one week away.
           </p>
-          <br></br>
-          <p>
-            The majority of my time spent on the frontend of this app was handling side effects of
-            user actions. My wife wanted to create classes, delete classes, update date and times
-            for classes, as well as adding her music playlist for each compelted class. Students
-            needed to be able to register for classes, cancel classes, and view playlists for
-            completed classes. I believe in giving the user feedback on meaningful user actions, so
-            I decided to create both a modal and toast contexts where I could pass in different
-            forms, lists, and error/success notifications
-          </p>
-        </div> */}
+        </div>
         <div>
           <img className="rounded mb-5" src="./images/wishlist-featured-1.png" />
           <p className="text-xs text-left m-auto px-5">
@@ -91,53 +86,42 @@ const CaseStudyWishlist = () => {
             together.
           </p>
         </div>
-        <div className="text-center">More to come!</div>
-        {/* <div>
-          <h3 className="text-center mb-5">Conclusions</h3>
-          <div>
-            <p>
-              Overall I was happy with the version of Flow with Megmo that I presented to my class.
-              I was able to complete everything on my checklist and begin learning some new
-              techniques (page transitions) and technologies (graphQL, Apollo) along the way. Even
-              moreso than the end product itself, I am most proud of the lessons I've taken from the
-              experience building it. A few of my very clear takeaways:
-            </p>
-            <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
-              <li>
-                <h4 className="mb-3">Have a clear direction for every decision</h4>
-                <p>
-                  The night before my presentation I realized I wanted to separate out the static
-                  sections into a landing page and keep the scheduling functionality on a separate
-                  dashboard page. I worked all night to entirely overhaul the layout and completed
-                  it on time, however, if I had taken the time to properly plan this out from the
-                  beginning I think I could have been able to make this decision before building the
-                  entire project.
-                </p>
-              </li>
-              <li>
-                <h4 className="mb-3">Don't underestimate the complexity of state</h4>
-                <p>
-                  When I originally planned out this project I did not expect the state management
-                  to become so complex. Turns out keeping a dashboard and database in sync is hard!
-                  Utilizing features like Apollo's polling and caching, React's useReducer, or
-                  Redux, I could have made my life much easier.
-                </p>
-              </li>
-              <li>
-                <h4 className="mb-3">Learn a component library or alternate styling solution</h4>
-                <p>
-                  I wrote plain CSS to style the entire landing page and dashboard, and I will
-                  probably never do that again. To achieve a cohesive design and layout, I will
-                  reach for component libraries like MaterialUI, CSS frameworks like Tailwind, or
-                  styling solutions like SASS or Styled Components
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div> */}
+        <div>
+          <h3 className="text-center mb-5">Key Takeaways</h3>
+          <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
+            <li>
+              <h4 className="mb-3">Upfront planning and preparation are invaluable</h4>
+              <p>
+                Fugiat ex sint enim deserunt ea est sint enim voluptate. In do cillum ut sunt mollit
+                deserunt est ea officia velit non quis. Cillum esse enim dolor minim. Aliqua magna
+                cupidatat qui deserunt anim enim duis labore et culpa voluptate ad. Irure dolore
+                Lorem ut dolor. Minim ipsum tempor veniam voluptate cupidatat et do et pariatur
+                cillum velit aliqua.
+              </p>
+            </li>
+            <li>
+              <h4 className="mb-3">Working on a team is a skill</h4>
+              <p>
+                Fugiat ex sint enim deserunt ea est sint enim voluptate. In do cillum ut sunt mollit
+                deserunt est ea officia velit non quis. Cillum esse enim dolor minim. Aliqua magna
+                cupidatat qui deserunt anim enim duis labore et culpa voluptate ad. Irure dolore
+                Lorem ut dolor. Minim ipsum tempor veniam voluptate cupidatat et do et pariatur
+                cillum velit aliqua.
+              </p>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   );
 };
 
 export default CaseStudyWishlist;
+
+//         I built this app alongside two other developers. We focused on user experience,
+//         automation, and mobile responsiveness. I took on a leadership role where I organized
+//         planning sessions for us to constantly re-align on the status of features and to make
+//         sure our goals were going to be met. Our first meetings were to discuss features and how
+//         we would split up the work. I handled the business logic across the front and back ends
+//         while my team members handled routing and design. The main features of our app include
+//         user authentication, private groups, personal wish lists, and automated email reminders.

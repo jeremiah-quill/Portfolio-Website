@@ -56,16 +56,112 @@ const CaseStudyFWM = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-center m-5">Approach</h3>
+          <h3 className="text-center m-5">Notable Features</h3>
+          <ul className="flex flex-col items-center">
+            <li>User authentication</li>
+            <li>Admin dashboard</li>
+            <li>Student dashboard</li>
+            <li>Automated email notifications</li>
+            <li>Animated route transitions</li>
+            <li>Global modals and toasts</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="mb-3 text-center">Feature Spotlight: Admin dashboard</h4>
           <p>
-            My first steps were writing out a list of potential features with my wife and narrowing
-            those down to what we wanted most. We decided on user authentication, a simple payment
-            flow, a teacher dashboard where she could create and manage zoom classes on a public
-            schedule, a student dashboard where users could sign up for and cancel classes on this
-            schedule, automated email notifications, and animated route transitions
+            Since my wife's classes are hosted through Zoom, the admin dashboard I built allows her
+            to interact with the Zoom API to create, delete, and update Zoom meetings. Submitting
+            the create class form fires an API call to Zoom which creates a meeting at her selected
+            date and time. The newly created Zoom meeting ID and details are added to my Mongo
+            database, where GraphQL queries fetch this data to display it on the schedule available
+            to students. The other feature I added to the admin dashboard is the ability for my wife
+            to add her Spotify playlist to completed classes to share with her students. I fetch my
+            wife's Spotify playlists through the Spotify API and display them in a list so she is
+            able to choose which playlist she used for each completed class
           </p>
         </div>
-        <ul className="flex flex-col gap-8">
+        <div>
+          <img className="rounded mb-5" src="./images/admin-dashboard-view-min.png" />
+          <p className="text-xs text-left m-auto px-5">
+            The admin dashboard is where my wife has control over her scheduled and completed
+            classes.
+          </p>
+        </div>
+        <div>
+          <img className="rounded mb-5" src="./images/create-class-view-min.png" />
+          <p className="text-xs text-left m-auto px-5">
+            Selecting and submitting class details through a form within the model context.
+            Submitting this form creates a zoom meeting and adds the class to the public schedule.
+          </p>
+        </div>
+        <div>
+          <img className="rounded mb-5" src="./images/dashboard-view-min.png" />
+          <p className="text-xs text-left m-auto px-5">
+            On the student dashboard user's can view, sign up for, and cancel classes that appear on
+            the public schedule.
+          </p>
+        </div>
+        <div>
+          <img className="rounded mb-5" src="./images/register-class-view-min.png" />
+          <p className="text-xs text-left m-auto px-5">
+            After confirming registration for a class, students are shown a custom made QR code
+            which sends them to a payment to my wife's venmo, pre-configured with the corresponding
+            class fee. We decided against using a payment processor to reduce costs due to this
+            being a side hobby for my wife, and rely on the honor system for user's to send payment.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-center mb-5">Key Takeaways</h3>
+          <div>
+            <p>
+              Overall I was happy with the version of Flow with Megmo that I presented to my class.
+              I was able to complete everything on my checklist and begin learning some new
+              techniques (page transitions) and technologies (graphQL, Apollo) along the way. Even
+              more than the end product itself, I am most proud of the lessons I've taken from the
+              experience building it. A few of my takeaways:
+            </p>
+            <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
+              <li>
+                <h4 className="mb-3">Have a clear direction for every decision</h4>
+                <p>
+                  The night before my presentation I realized I wanted to separate out the static
+                  sections into a landing page and keep the scheduling functionality on a separate
+                  dashboard page. I worked all night to entirely overhaul the layout and completed
+                  it on time, however, if I had taken the time to properly plan this out from the
+                  beginning I think I could have been able to make this decision before building the
+                  entire project.
+                </p>
+              </li>
+              <li>
+                <h4 className="mb-3">Don't underestimate the complexity of state</h4>
+                <p>
+                  When I originally planned out this project I did not expect the state management
+                  to become so complex. Turns out keeping a dashboard and database in sync is hard!
+                  Utilizing features like Apollo's polling and caching, React's useReducer, or
+                  Redux, I could have made my life much easier.
+                </p>
+              </li>
+              <li>
+                <h4 className="mb-3">Learn a component library or alternate styling solution</h4>
+                <p>
+                  I wrote plain CSS to style the entire landing page and dashboard, and I will
+                  probably never do that again. To achieve a cohesive design and layout, I will
+                  reach for component libraries like MaterialUI, CSS frameworks like Tailwind, or
+                  styling solutions like SASS or Styled Components
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CaseStudyFWM;
+
+{
+  /* <ul className="flex flex-col gap-8">
           <li>
             <h4 className="mb-3">User Authentication</h4>
             <p>
@@ -91,20 +187,6 @@ const CaseStudyFWM = () => {
               class and are given the Venmo details to pay on their own. On desktop I show user's a
               custom Venmo QR code, and on mobile I offer a simple button. In either case the user
               is taken to Venmo with a payment pre-filled with the class fee.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Admin Dashboard</h4>
-            <p>
-              Since my wife's classes are hosted through Zoom, the admin dashboard I built allows
-              her to interact with the Zoom API to create, delete, and update Zoom meetings.
-              Submitting the create class form fires an API call to Zoom which creates a meeting at
-              her selected date and time. The newly created Zoom meeting ID and details are added to
-              my Mongo database, where GraphQL queries fetch this data to display it on the schedule
-              available to students. The other feature I added to the admin dashboard is the ability
-              for my wife to add her Spotify playlist to completed classes to share with her
-              students. I fetch my wife's Spotify playlists through the Spotify API and display them
-              in a list so she is able to choose which playlist she used for each completed class
             </p>
           </li>
           <li>
@@ -150,83 +232,5 @@ const CaseStudyFWM = () => {
               and CSS transitions that trigger when a route is hit.
             </p>
           </li>
-        </ul>
-        <div>
-          <img className="rounded mb-5" src="./images/admin-dashboard-view-min.png" />
-          <p className="text-xs text-left m-auto px-5">
-            The admin dashboard is where my wife has control over her scheduled and completed
-            classes.
-          </p>
-        </div>
-        <div>
-          <img className="rounded mb-5" src="./images/create-class-view-min.png" />
-          <p className="text-xs text-left m-auto px-5">
-            Selecting and submitting class details through a form within the model context.
-            Submitting this form creates a zoom meeting and adds the class to the public schedule.
-          </p>
-        </div>
-        <div>
-          <img className="rounded mb-5" src="./images/dashboard-view-min.png" />
-          <p className="text-xs text-left m-auto px-5">
-            On the student dashboard user's can view, sign up for, and cancel classes that appear on
-            the public schedule.
-          </p>
-        </div>
-        <div>
-          <img className="rounded mb-5" src="./images/register-class-view-min.png" />
-          <p className="text-xs text-left m-auto px-5">
-            After confirming registration for a class, students are shown a custom made QR code
-            which sends them to a payment to my wife's venmo, pre-configured with the corresponding
-            class fee. We decided against using a payment processor to reduce costs due to this
-            being a side hobby for my wife, and rely on the honor system for user's to send payment.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-center mb-5">Conclusions</h3>
-          <div>
-            <p>
-              Overall I was happy with the version of Flow with Megmo that I presented to my class.
-              I was able to complete everything on my checklist and begin learning some new
-              techniques (page transitions) and technologies (graphQL, Apollo) along the way. Even
-              moreso than the end product itself, I am most proud of the lessons I've taken from the
-              experience building it. A few of my very clear takeaways:
-            </p>
-            <ol className="flex flex-col gap-5 mt-10 px-5 list-decimal">
-              <li>
-                <h4 className="mb-3">Have a clear direction for every decision</h4>
-                <p>
-                  The night before my presentation I realized I wanted to separate out the static
-                  sections into a landing page and keep the scheduling functionality on a separate
-                  dashboard page. I worked all night to entirely overhaul the layout and completed
-                  it on time, however, if I had taken the time to properly plan this out from the
-                  beginning I think I could have been able to make this decision before building the
-                  entire project.
-                </p>
-              </li>
-              <li>
-                <h4 className="mb-3">Don't underestimate the complexity of state</h4>
-                <p>
-                  When I originally planned out this project I did not expect the state management
-                  to become so complex. Turns out keeping a dashboard and database in sync is hard!
-                  Utilizing features like Apollo's polling and caching, React's useReducer, or
-                  Redux, I could have made my life much easier.
-                </p>
-              </li>
-              <li>
-                <h4 className="mb-3">Learn a component library or alternate styling solution</h4>
-                <p>
-                  I wrote plain CSS to style the entire landing page and dashboard, and I will
-                  probably never do that again. To achieve a cohesive design and layout, I will
-                  reach for component libraries like MaterialUI, CSS frameworks like Tailwind, or
-                  styling solutions like SASS or Styled Components
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default CaseStudyFWM;
+        </ul> */
+}
