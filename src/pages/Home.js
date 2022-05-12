@@ -10,6 +10,7 @@ import CustomLink from '../components/CustomLink';
 import About from '../components/About';
 import CaseStudyFWM from '../components/CaseStudy';
 import CaseStudyWishlist from '../components/CaseStudyWishlist';
+import CaseStudyHeroHelper from '../components/CaseStudyHeroHelper';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -21,8 +22,9 @@ const Home = () => {
   return (
     <div className="pt-12">
       {/* <About /> */}
-      {/* <CaseStudyFWM /> */}
-      <CaseStudyWishlist />
+      <CaseStudyFWM />
+      {/* <CaseStudyWishlist /> */}
+      {/* <CaseStudyHeroHelper /> */}
     </div>
     // <div className="main-container">
     // 	<div className="inner-container">
