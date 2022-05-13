@@ -11,13 +11,25 @@ const CaseStudyPlaylists = () => {
         <h1 className="text-4xl mb-3">Playlist Palette</h1>
         <h2 className="text-xl">Spotify Playlist Randomizer</h2>
         <div className="mt-10 flex justify-center gap-5">
-          <button className="bg-black text-white py-2 px-5 rounded">Live</button>
-          <button className="bg-black text-white py-2 px-5 rounded">Repo</button>
+          <a
+            rel="noreferrer"
+            href="https://jeremiah-quill.github.io/spotify-playlists/"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Live
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://github.com/jeremiah-quill/spotify-playlists"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Repo
+          </a>
         </div>
       </div>
-      <div className="p-5 max-w-screen-md m-auto flex flex-col gap-20 my-20">
+      <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img className="rounded" src="./images/playlists-featured-2.png" />
+          <img alt="playlist palette" className="rounded" src="./images/playlists-featured-2.png" />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>
@@ -35,7 +47,9 @@ const CaseStudyPlaylists = () => {
           <h3 className="text-center mb-5 text-2xl">Technologies</h3>
           <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
             {project.technologies.map((tech) => (
-              <li className="px-3 py-1 bg-white text-black rounded-3xl">{tech}</li>
+              <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
+                {tech}
+              </li>
             ))}
           </ul>
         </div>
@@ -60,14 +74,18 @@ const CaseStudyPlaylists = () => {
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/playlists-featured-1.png" />
+          <img
+            alt="playlist palette"
+            className="rounded mb-5"
+            src="./images/playlists-featured-1.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             Spotify user authentication flow which approves access to read and write to user's
             playlists.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/playlists.png" />
+          <img alt="playlist palette" className="rounded mb-5" src="./images/playlists.png" />
           <p className="text-xs text-left m-auto px-5">
             On the left of the screen is a bar containing user's playlists. There are 3 playlists
             chosen and the green draggable inputs tell the app how many songs of each playlist to
@@ -75,7 +93,11 @@ const CaseStudyPlaylists = () => {
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/playlists-featured-3.png" />
+          <img
+            alt="playlist palette"
+            className="rounded mb-5"
+            src="./images/playlists-featured-3.png"
+          />
           <p className="text-xs text-left m-auto px-5">
             Once the user has chosen their playlists and track amounts they can name their playlist
             and export it to Spotify.
@@ -85,7 +107,9 @@ const CaseStudyPlaylists = () => {
           <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
           <ul className="flex flex-col gap-5 mt-10 px-5">
             <li>
-              <h4 className="mb-3 text-center">External APIs can shape complexity</h4>
+              <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                External APIs can shape complexity
+              </h4>
               <p>
                 When I was first brainstorming the idea for this app I envisioned a much simpler
                 development experience and additional features. What I learned once I started
@@ -98,7 +122,9 @@ const CaseStudyPlaylists = () => {
               </p>
             </li>
             <li>
-              <h4 className="mb-3 text-center">External APIs can shape complexity</h4>
+              <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                External APIs can shape complexity
+              </h4>
               <p>
                 When I was first brainstorming the idea for this app I envisioned a much simpler
                 development experience and additional features. What I learned once I started

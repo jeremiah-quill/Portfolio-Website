@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import FadeUp from '../animations/FadeUp';
-import { Link } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
 import projectData from '../content/content.js';
 import Project from '../components/Project';
 import Contact from '../components/Contact';
 import Socials from '../components/Socials';
 import CustomLink from '../components/CustomLink';
-import About from '../components/About';
-import CaseStudyFWM from '../components/CaseStudyFWM';
-import CaseStudyWishlist from '../components/CaseStudyWishlist';
-import CaseStudyPlaylists from '../components/CaseStudyPlaylists';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -20,12 +15,6 @@ const Home = () => {
   ]);
 
   return (
-    // <div className="pt-12">
-    //   {/* <About /> */}
-    //   {/* <CaseStudyFWM /> */}
-    //   {/* <CaseStudyWishlist /> */}
-    //   {/* <CaseStudyPlaylists /> */}
-    // </div>
     <div className="main-container">
       <div className="inner-container">
         <div className="section-container">

@@ -11,13 +11,25 @@ const CaseStudyWishlist = () => {
         <h1 className="text-4xl mb-3">Wishlist</h1>
         <h2 className="text-xl">Full Stack Secret Santa Manager</h2>
         <div className="mt-10 flex justify-center gap-5">
-          <button className="bg-black text-white py-2 px-5 rounded">Live</button>
-          <button className="bg-black text-white py-2 px-5 rounded">Repo</button>
+          <a
+            rel="noreferrer"
+            href="https://wishlistmanager.herokuapp.com/"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Live
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://github.com/jeremiah-quill/gift-exchange-manager"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Repo
+          </a>
         </div>
       </div>
-      <div className="p-5 max-w-screen-md m-auto flex flex-col gap-20 my-20">
+      <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img className="rounded" src="./images/wishlist.png" />
+          <img className="rounded" src="./images/wishlist.png" alt="wishlist" />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>
@@ -66,14 +78,14 @@ const CaseStudyWishlist = () => {
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/wishlist-featured-1.png" />
+          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-1.png" />
           <p className="text-xs text-left m-auto px-5">
             On the personal dashboard page users are able to add gifts to their wishlist, as well as
             create or view groups.
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/wishlist-featured-2.png" />
+          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-2.png" />
           <p className="text-xs text-left m-auto px-5">
             The create group form, where a user is able to create a new secret santa group. Once
             created, the group owner will be able to share a group password so others are able to
@@ -81,7 +93,7 @@ const CaseStudyWishlist = () => {
           </p>
         </div>
         <div>
-          <img className="rounded mb-5" src="./images/wishlist-featured-3.png" />
+          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-3.png" />
           <p className="text-xs text-left m-auto px-5">
             The group dashboard is only available to the user who created the group. It contains
             editable group details like name, date, and price limit. It also contains an ID and
@@ -94,7 +106,9 @@ const CaseStudyWishlist = () => {
           <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
           <ul className="flex flex-col gap-5 mt-10 px-5">
             <li>
-              <h4 className="mb-3 text-center">Planning and preparation are invaluable</h4>
+              <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                Planning and preparation are invaluable
+              </h4>
               <p>
                 The biggest reason we were able to succeed in including all of the original features
                 we had intended is because of our up front planning and preparation. We discussed
@@ -103,7 +117,9 @@ const CaseStudyWishlist = () => {
               </p>
             </li>
             <li>
-              <h4 className="mb-3 text-center">Working on a team is a skill</h4>
+              <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                Working on a team is a skill
+              </h4>
               <p>
                 Working on multiple branches in git, code reviewing, and collaboring on
                 decisionmaking are just a few of the important aspects I experienced building this

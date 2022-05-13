@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import pic1 from './images/flow-with-megmo.png';
 
 const CaseStudyFWM = () => {
@@ -29,11 +30,23 @@ const CaseStudyFWM = () => {
         <h1 className="text-4xl mb-3">Flow with Megmo</h1>
         <h2 className="text-xl">Full Stack Marketing Page + Scheduling Tool</h2>
         <div className="mt-10 flex justify-center gap-5">
-          <button className="bg-black text-white py-2 px-5 rounded">Live</button>
-          <button className="bg-black text-white py-2 px-5 rounded">Repo</button>
+          <a
+            rel="noreferrer"
+            href="http://www.flowwithmegmo.com/"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Live
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://github.com/jeremiah-quill/flow-with-megmo"
+            target="_blank"
+            className="bg-black text-white py-2 px-5 rounded">
+            Repo
+          </a>
         </div>
       </div>
-      <div className="p-5 max-w-screen-md m-auto flex flex-col gap-20 my-20">
+      <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
           <img className="rounded" alt="flow with megmo" src="./images/flow-with-megmo.png" />
         </div>
@@ -64,13 +77,16 @@ const CaseStudyFWM = () => {
             <li>User authentication</li>
             <li>Admin dashboard</li>
             <li>Student dashboard</li>
+            <li>Spotify & Zoom Integrations</li>
             <li>Automated email notifications</li>
             <li>Animated route transitions</li>
             <li>Global modals and toasts</li>
           </ul>
         </div>
         <div>
-          <h4 className="text-center mb-5 text-2xl">Feature Spotlight: Admin dashboard</h4>
+          <h4 className="text-center mb-5 text-2xl">
+            Feature Spotlight: Spotify & Zoom Integrations
+          </h4>
           <p>
             Since my wife's classes are hosted through Zoom, the admin dashboard I built allows her
             to interact with the Zoom API to create, delete, and update Zoom meetings. Submitting
@@ -139,9 +155,11 @@ const CaseStudyFWM = () => {
               more than the end product itself, I am most proud of the lessons I've taken from the
               experience building it. A few of my takeaways:
             </p>
-            <ul className="flex flex-col gap-5 mt-10 px-5 ">
+            <ul className="flex flex-col gap-5 mt-10 px-5">
               <li>
-                <h4 className="mb-3 text-center">Have a clear direction for every decision</h4>
+                <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                  Have a clear direction for every decision
+                </h4>
                 <p>
                   The night before my presentation I realized I wanted to separate out the static
                   sections into a landing page and keep the scheduling functionality on a separate
@@ -152,7 +170,9 @@ const CaseStudyFWM = () => {
                 </p>
               </li>
               <li>
-                <h4 className="mb-3 text-center">Don't underestimate the complexity of state</h4>
+                <h4 className="mb-3 text-center text-lg text-orange-accent italic">
+                  Don't underestimate the complexity of state
+                </h4>
                 <p>
                   When I originally planned out this project I did not expect the state management
                   to become so complex. Turns out keeping a dashboard and database in sync is hard!
@@ -161,7 +181,7 @@ const CaseStudyFWM = () => {
                 </p>
               </li>
               <li>
-                <h4 className="mb-3 text-center">
+                <h4 className="mb-3 text-center text-lg text-orange-accent italic">
                   Learn a component library or alternate styling solution
                 </h4>
                 <p>
