@@ -36,16 +36,15 @@ const CaseStudyPlaylists = () => {
           <p>
             Playlist Palette is an app built with React that curates randomized playlists. I came up
             with the idea because I organize all of my playlists by similar music type (lofi beats,
-            house, blues, chill hop hop, etc.) and would often find myself wanting to combine
-            multiple playlists into one for a specific occasion. This tool gives users the ability
-            to select from their pre-existing playlists, choose how many songs to use, generated a
-            playlist based on these conditions, and finally export the newly generated playlist to
-            Spotify.
+            house, blues, etc.) and would often find myself wanting to combine multiple playlists
+            into one for a specific occasion. This tool gives users the ability to select from their
+            pre-existing playlists, choose how many songs to use, generated a playlist based on
+            these conditions, and finally export the newly generated playlist to Spotify.
           </p>
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Technologies</h3>
-          <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
+          <ul className="flex justify-center max-w-xl flex-wrap gap-5 m-auto mb-5">
             {project.technologies.map((tech) => (
               <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
                 {tech}
@@ -111,29 +110,11 @@ const CaseStudyPlaylists = () => {
                 External APIs can shape complexity
               </h4>
               <p>
-                When I was first brainstorming the idea for this app I envisioned a much simpler
-                development experience and additional features. What I learned once I started
-                digging into the Spotify API docs is that sometimes the external data source has
-                limitations that hamper some of these features. For example rather than including
-                each track and it's details in an array on each playlist object, the API was setup
-                so I had to make subsequent API calls for each track. To build any kind of
-                comprehensive feature using Spotify requires enormous amounts of API calls which can
-                become expensive.
-              </p>
-            </li>
-            <li>
-              <h4 className="mb-3 text-center text-lg text-orange-accent italic">
-                External APIs can shape complexity
-              </h4>
-              <p>
-                When I was first brainstorming the idea for this app I envisioned a much simpler
-                development experience and additional features. What I learned once I started
-                digging into the Spotify API docs is that sometimes the external data source has
-                limitations that hamper some of these features. For example rather than including
-                each track and it's details in an array on each playlist object, the API was setup
-                so I had to make subsequent API calls for each track. To build any kind of
-                comprehensive feature using Spotify requires enormous amounts of API calls which can
-                become expensive.
+                Sometimes developer's are at the mercy of the external data source they are using.
+                For example rather than including each track and it's details in an array on each
+                playlist object, the Spotify API is setup so I had to make subsequent API calls for
+                each track. To build any kind of comprehensive feature using Spotify requires
+                enormous amounts of API calls which can become expensive.
               </p>
             </li>
           </ul>
@@ -144,11 +125,3 @@ const CaseStudyPlaylists = () => {
 };
 
 export default CaseStudyPlaylists;
-
-//         I built this app alongside two other developers. We focused on user experience,
-//         automation, and mobile responsiveness. I took on a leadership role where I organized
-//         planning sessions for us to constantly re-align on the status of features and to make
-//         sure our goals were going to be met. Our first meetings were to discuss features and how
-//         we would split up the work. I handled the business logic across the front and back ends
-//         while my team members handled routing and design. The main features of our app include
-//         user authentication, private groups, personal wish lists, and automated email reminders.

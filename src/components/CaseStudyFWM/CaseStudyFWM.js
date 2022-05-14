@@ -63,7 +63,7 @@ const CaseStudyFWM = () => {
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Technologies</h3>
-          <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
+          <ul className="flex justify-center max-w-xl flex-wrap gap-5 m-auto mb-5">
             {project.technologies.map((tech) => (
               <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
                 {tech}
@@ -200,78 +200,3 @@ const CaseStudyFWM = () => {
 };
 
 export default CaseStudyFWM;
-
-{
-  /* <ul className="flex flex-col gap-8">
-          <li>
-            <h4 className="mb-3">User Authentication</h4>
-            <p>
-              I used JSON Web Tokens (JWT) to manage user authentication. On signup a user's email
-              and username are added to my Mongo database, and their password is hashed using
-              Bcrypt. On successful login I return a JWT to my frontend where I add it to local
-              storage, so user's are able to navigate away from the page and return to find that
-              they are still logged in.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Payments</h4>
-            <p>
-              Accepting payments for class registration was an interesting problem. My goal was to
-              give user's a way to pay for class, and gatekeep the actual class registration until
-              the payment had been successfully submitted. After a lot of research I found the only
-              way to do that would be by using a payment processor like Stripe, Paypal, etc. I chose
-              a solution offered through Paypal called Braintree, and configured it using a free
-              sandbox version. It worked great and I was able to successfully gatekeep the
-              registration process behind a Venmo payment, however, eventually we decided that for a
-              side gig like this a payment processor solution was too robust. I solved this by
-              allowing students to pay through the honor system. Students are able to register for
-              class and are given the Venmo details to pay on their own. On desktop I show user's a
-              custom Venmo QR code, and on mobile I offer a simple button. In either case the user
-              is taken to Venmo with a payment pre-filled with the class fee.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Student Dashboard</h4>
-            <p>
-              When viewing the available class schedule students are able to register for and cancel
-              future classes, as well as view previously attended classes. This is accomplished
-              through GraphQL mutations, which perform CRUD operations on the classes that are
-              stored in my Mongo database.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Automated Emails</h4>
-            <p>
-              People are busy and forget things, so I wanted to make sure any major user actions
-              like registering for or canceling a class were confirmed through an automated email. I
-              achieved this through Nodemailer and custom email templates that are sent to students
-              on these major actions. For exmaple when a student registers for class they are sent
-              an email with a welcome message, class details, and a Zoom link for that specific
-              class. I also implemented a feature where students are able to toggle whether they
-              receive new class udpates via email. When checked yes and my wife creates a new class,
-              they are sent an email notifying them that there is a new class on the schedule.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Modals and Toasts</h4>
-            <p>
-              I believe in giving the user feedback on meaningful user actions, so I implemented a
-              global toast notification using React's Context API. On both small and large user
-              actions I pass in errors or success notifications. I also implemented a global modal
-              using Context. I am able to pass into my modal different components like a list of
-              students, a create class form, or a login form. This achieves a cohesiveness
-              throughout the application and grabs the user's attention when they are required to
-              complete any inputs.
-            </p>
-          </li>
-          <li>
-            <h4 className="mb-3">Route Transitions</h4>
-            <p>
-              This was my first attempt at animated route transitions, and I had a lot of fun with
-              it! I implemented a simple but clean transition where two full screen divs slide
-              across the screen to reveal the next page. I achieved this effect using set timeouts
-              and CSS transitions that trigger when a route is hit.
-            </p>
-          </li>
-        </ul> */
-}

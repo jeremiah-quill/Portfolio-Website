@@ -44,7 +44,7 @@ const CaseStudyWishlist = () => {
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Technologies</h3>
-          <ul className="flex justify-center w-full flex-wrap gap-5 mb-5">
+          <ul className="flex justify-center max-w-xl flex-wrap gap-5 m-auto mb-5">
             {project.technologies.map((tech) => (
               <li key={tech} className="px-3 py-1 bg-white text-black rounded-3xl">
                 {tech}
@@ -95,11 +95,11 @@ const CaseStudyWishlist = () => {
         <div>
           <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-3.png" />
           <p className="text-xs text-left m-auto px-5">
-            The group dashboard is only available to the user who created the group. It contains
-            editable group details like name, date, and price limit. It also contains an ID and
-            password that when shared with other users, allows them to join the group. Lastly, this
-            page includes a draw names button which randomly matches every member of the group
-            together.
+            The group dashboard contains group details and a shareable group ID and password for
+            others to join. The user who created the group has access to a form to update the group
+            name, date, and price limit. The group leader is also given access to a "draw names"
+            button. Once drawn, each member of the group will be randomly assigned another member as
+            their secret santa and access to view their assigned member's wishlist.
           </p>
         </div>
         <div>
@@ -110,10 +110,9 @@ const CaseStudyWishlist = () => {
                 Planning and preparation are invaluable
               </h4>
               <p>
-                The biggest reason we were able to succeed in including all of the original features
-                we had intended is because of our up front planning and preparation. We discussed
-                our timeline, who would work on what, and why certain things were not viable for our
-                constraints.
+                The biggest reason we were able to complete all of our initial goals is because of
+                our up front planning and preparation. We discussed our timeline, assigned roles,
+                and mapped out our main features early on which paved the way for our success.
               </p>
             </li>
             <li>
@@ -121,9 +120,9 @@ const CaseStudyWishlist = () => {
                 Working on a team is a skill
               </h4>
               <p>
-                Working on multiple branches in git, code reviewing, and collaboring on
-                decisionmaking are just a few of the important aspects I experienced building this
-                app.
+                Working on multiple branches in git, code reviewing, and collaborating on decision
+                making are just a few of the important aspects of working on a team that I
+                experienced building this app.
               </p>
             </li>
           </ul>
