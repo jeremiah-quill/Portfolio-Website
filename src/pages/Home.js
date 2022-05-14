@@ -136,6 +136,20 @@ const Home = () => {
               ))}
             </Fade>
           </ul>
+          <div className="flex justify-center">
+            <Fade direction="up" delay={0} triggerOnce fraction={0}>
+              <p>
+                Or checkout my{` `}
+                <a
+                  className="text-orange-accent font-bold hover:underline"
+                  href="https://github.com/jeremiah-quill"
+                  target="_blank"
+                  rel="noopener">
+                  Github.
+                </a>
+              </p>
+            </Fade>
+          </div>
           {/* <div className="flex-center-container">
             <Fade direction="up" delay={0} triggerOnce fraction={0}>
               <CustomLink to="/work" className="btn secondary">
