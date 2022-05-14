@@ -149,11 +149,11 @@ const CaseStudyFWM = () => {
           <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
           <div>
             <p>
-              Overall I was happy with the version of Flow with Megmo that I presented to my class.
-              I was able to complete everything on my checklist and begin learning some new
-              techniques (page transitions) and technologies (graphQL, Apollo) along the way. Even
-              more than the end product itself, I am most proud of the lessons I've taken from the
-              experience building it. A few of my takeaways:
+              Overall I am happy with Flow with Megmo. I was able to complete everything on my
+              checklist and begin learning some new techniques (page transitions) and technologies
+              (graphQL, Apollo) along the way. Even more than the end product itself, I am most
+              proud of the lessons I've taken from the experience building it. A few of my
+              takeaways:
             </p>
             <ul className="flex flex-col gap-5 mt-10 px-5">
               <li>
