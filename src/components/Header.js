@@ -3,13 +3,30 @@ import { useLocation } from 'react-router-dom';
 import CustomLink from './CustomLink';
 import { BiChevronRight } from 'react-icons/bi';
 import { useWidthContext } from '../contexts/WidthContext';
+import { motion } from 'framer-motion';
 
 function Header() {
   const ref = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(null);
   const location = useLocation();
-
   const { width } = useWidthContext();
+
+  const menu = {
+    show: {
+      transition: {
+        staggerChildren: 1,
+      },
+    },
+  };
+
+  const dropdownLink = {
+    hide: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+    },
+  };
 
   function toggleMenu() {
     setIsMenuOpen((curr) => !curr);
@@ -39,10 +56,10 @@ function Header() {
 
   return (
     <header className="z-50 flex items-center fixed bg-white w-full py-2 h-12 top-0">
-      <nav>
+      <nav className="flex items-stretch">
         <CustomLink to="/">Home</CustomLink>
         <div>
-          <div className="relative">
+          <div className="relative z-10 bg-white flex items-center">
             <button
               ref={ref}
               to="null"
@@ -51,22 +68,32 @@ function Header() {
               Case Studies
             </button>
             {width > 500 ? (
-              <div className="text-black h-full flex items-center absolute left-full top-0.5 -translate-y-0.5 ml-2">
-                <BiChevronRight
-                  style={memoizedPathname !== '' ? { color: 'black' } : { color: 'white' }}
-                />
-                <h3 className="text-black ml-2 font-normal text-xs w-max underline">
+              <motion.div
+                initial={{ rotate: '90deg' }}
+                animate={memoizedPathname !== '' ? { rotate: '0deg' } : { rotate: '90deg' }}>
+                <BiChevronRight className="m-0 p-0" style={{ color: 'black' }} />
+              </motion.div>
+            ) : null}
+            {width > 500 && memoizedPathname !== '' ? (
+              <motion.div
+                // initial={{ opacity: 0, x: -20, top: '50%', y: '-50%' }}
+                // animate={{ opacity: 1, x: 0, top: '50%', y: '-50%' }}
+                className="text-black h-full flex items-center absolute left-full top-0.5 -translate-y-0.5 -ml-2">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="text-black ml-2 font-normal text-xs w-max underline p-0 m-0">
                   {memoizedPathname}
-                </h3>
-              </div>
+                </motion.h3>
+              </motion.div>
             ) : null}
           </div>
           {isMenuOpen ? (
-            <div className="absolute bg-white border-black border">
+            <div className="absolute bg-white border-black border z-0">
               <CustomLink className="p-1 hover:bg-gray-300 no-underline" to="/flow-with-megmo">
                 Flow with Megmo
               </CustomLink>
-              <CustomLink className="p-1 hover:bg-gray-300" to="/wishlist">
+              <CustomLink variants={dropdownLink} className="p-1 hover:bg-gray-300" to="/wishlist">
                 Wishlist
               </CustomLink>
               <CustomLink className="p-1 hover:bg-gray-300" to="/playlist-palette">

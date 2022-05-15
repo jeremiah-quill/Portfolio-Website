@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
-import { useResolvedPath, useMatch, Link, useLocation } from 'react-router-dom';
+import { useResolvedPath, useMatch, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-function CustomLink({ children, to, ...props }) {
+function CustomLink({ children, variants, to, ...props }) {
   let resolved = useResolvedPath(to);
   let match = useMatch({ path: resolved.pathname, end: true });
-  const location = useLocation();
 
   return (
     <div>
@@ -12,7 +11,10 @@ function CustomLink({ children, to, ...props }) {
         {children}
       </Link> */}
       <Link
-        style={{ borderBottom: match && match.pathname === '/' ? '3px solid black' : 'none' }}
+        style={{
+          borderBottom:
+            match && match.pathname === '/' ? '3px solid black' : '3px solid transparent',
+        }}
         to={to}
         {...props}>
         {children}
