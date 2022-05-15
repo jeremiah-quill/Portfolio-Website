@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import CustomLink from './CustomLink';
 import { BiChevronRight } from 'react-icons/bi';
 import { useWidthContext } from '../contexts/WidthContext';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Header() {
   const ref = useRef();
@@ -33,7 +33,6 @@ function Header() {
   }
 
   const memoizedPathname = useMemo(() => {
-    console.log(location.pathname);
     switch (location.pathname) {
       case '/flow-with-megmo':
         return 'Flow with Megmo';
@@ -75,17 +74,14 @@ function Header() {
               </motion.div>
             ) : null}
             {width > 500 && memoizedPathname !== '' ? (
-              <motion.div
-                // initial={{ opacity: 0, x: -20, top: '50%', y: '-50%' }}
-                // animate={{ opacity: 1, x: 0, top: '50%', y: '-50%' }}
-                className="text-black h-full flex items-center absolute left-full top-0.5 -translate-y-0.5 -ml-2">
+              <div className="text-black h-full flex items-center absolute left-full top-0.5 -translate-y-0.5 -ml-2">
                 <motion.h3
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="text-black ml-2 font-normal text-xs w-max underline p-0 m-0">
                   {memoizedPathname}
                 </motion.h3>
-              </motion.div>
+              </div>
             ) : null}
           </div>
           {isMenuOpen ? (

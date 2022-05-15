@@ -1,14 +1,41 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const CaseStudyPlaylists = () => {
+  const caseStudyPage = {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+    enter: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+    },
+    transition: {
+      duration: 5,
+    },
+  };
+  const transition = {
+    duration: 0.5,
+  };
+
   const project = {
     technologies: ['React', 'MaterialUI'],
   };
 
   return (
-    <div>
+    <motion.div
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={caseStudyPage}
+      transition={transition}>
       <div className="bg-blue-800 text-center py-32">
-        <h1 className="text-4xl mb-3">Playlist Palette</h1>
+        <motion.h1 className="text-4xl mb-3">Playlist Palette</motion.h1>
         <h2 className="text-xl">Spotify Playlist Randomizer</h2>
         <div className="mt-10 flex justify-center gap-5">
           <a
@@ -120,7 +147,7 @@ const CaseStudyPlaylists = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import pic1 from './images/flow-with-megmo.png';
+import { motion } from 'framer-motion';
 
 const CaseStudyFWM = () => {
+  const caseStudyPage = {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+    enter: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+    },
+    transition: {
+      duration: 5,
+    },
+  };
+
+  const transition = {
+    duration: 0.5,
+  };
+
   const project = {
     headerDetails: {
       title: 'Flow with Megmo',
@@ -25,9 +48,14 @@ const CaseStudyFWM = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={caseStudyPage}
+      transition={transition}>
       <div className="bg-blue-800 text-center py-32">
-        <h1 className="text-4xl mb-3">Flow with Megmo</h1>
+        <motion.h1 className="text-4xl mb-3">Flow with Megmo</motion.h1>
         <h2 className="text-xl">Full Stack Marketing Page + Scheduling Tool</h2>
         <div className="mt-10 flex justify-center gap-5">
           <a
@@ -195,7 +223,7 @@ const CaseStudyFWM = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
