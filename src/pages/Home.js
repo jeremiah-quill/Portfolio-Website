@@ -101,7 +101,7 @@ const Home = () => {
               <br></br>
               I'm currently teaching myself <span className="important-text">Gatsby</span>,{' '}
               <span className="important-text">Figma</span>, and{' '}
-              <span className="important-text">Sass</span>.
+              <span className="important-text">Tailwind</span>.
             </p>
             <div>
               <h3 className="what-im-good-at">What I'm good at</h3>
@@ -118,12 +118,15 @@ const Home = () => {
                 <li className="pill">CSS</li>
                 <li className="pill">Javascript</li>
                 <li className="pill">React</li>
+                <li className="pill">Framer Motion</li>
+                <li className="pill">Sass</li>
                 <li className="pill">React Transition Group</li>
                 <li className="pill">React Router</li>
                 <li className="pill">Mobile Design</li>
                 <li className="pill">NodeJS</li>
                 <li className="pill">MongoDB</li>
                 <li className="pill">Heroku</li>
+                <li className="pill">Netlify</li>
                 <li className="pill">Express</li>
                 <li className="pill">GraphQL</li>
                 <li className="pill">Apollo Client</li>
