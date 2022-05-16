@@ -72,6 +72,7 @@ const CaseStudyFWM = () => {
             }}
           /> */}
           <ProgressiveImg
+            className="rounded"
             lowQualityImg={'./images/case_studies/fwm/fwm_hero-small.png'}
             highQualityImg={'./images/case_studies/fwm/fwm_hero.png'}
           />

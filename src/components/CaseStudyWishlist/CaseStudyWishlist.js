@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
 import useProgressiveImg from '../../hooks/useProgressiveImg';
+import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
 
 const CaseStudyWishlist = () => {
   const [src, { blur }] = useProgressiveImg(
@@ -42,7 +43,12 @@ const CaseStudyWishlist = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img
+          <ProgressiveImg
+            className="rounded"
+            lowQualityImg={'./images/case_studies/wishlist/wishlist_hero_small.png'}
+            highQualityImg={'./images/case_studies/wishlist/wishlist_hero.png'}
+          />
+          {/* <img
             className="rounded"
             alt="wishlist"
             src={src}
@@ -50,7 +56,7 @@ const CaseStudyWishlist = () => {
               filter: blur ? 'blur(20px)' : 'none',
               transition: blur ? 'none' : 'filter 0.3s ease-out',
             }}
-          />
+          /> */}
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>

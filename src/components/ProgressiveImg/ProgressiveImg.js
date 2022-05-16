@@ -1,16 +1,18 @@
 import React from 'react';
 
-const ProgressiveImg = ({ lowQualityImg, highQualityImg }) => {
+const ProgressiveImg = ({ lowQualityImg, highQualityImg, className }) => {
   const [isLoaded, setIsLoaded] = React.useState(false);
 
   return (
     <React.Fragment>
       <img
+        className={className}
         alt="test"
         src={lowQualityImg}
-        style={{ visibility: isLoaded ? 'hidden' : 'visible', filter: 'blur(20px)' }}
+        style={{ width: '100%', display: isLoaded ? 'none' : 'block', filter: 'blur(20px)' }}
       />
       <img
+        className={className}
         onLoad={() => {
           setIsLoaded(true);
         }}
