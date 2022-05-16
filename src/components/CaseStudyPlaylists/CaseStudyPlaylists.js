@@ -1,28 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { pageFade, pageFadeTransition } from '../../animations/variants';
 
 const CaseStudyPlaylists = () => {
-  const caseStudyPage = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    enter: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-    },
-    transition: {
-      duration: 5,
-    },
-  };
-  const transition = {
-    duration: 0.5,
-  };
-
   const project = {
     technologies: ['React', 'MaterialUI'],
   };
@@ -32,8 +12,8 @@ const CaseStudyPlaylists = () => {
       initial="initial"
       animate="enter"
       exit="exit"
-      variants={caseStudyPage}
-      transition={transition}>
+      variants={pageFade}
+      transition={pageFadeTransition}>
       <div className="bg-blue-800 text-center py-32">
         <motion.h1 className="text-4xl mb-3">Playlist Palette</motion.h1>
         <h2 className="text-xl">Spotify Playlist Randomizer</h2>

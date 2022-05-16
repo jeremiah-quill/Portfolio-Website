@@ -1,30 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { pageFade, pageFadeTransition } from '../../animations/variants';
 
 const CaseStudyWishlist = () => {
   const project = {
     technologies: ['Express', 'NodeJS', 'Heroku', 'MySQL', 'Sequelize', 'Bcrypt', 'Nodemailer'],
-  };
-
-  const caseStudyPage = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    enter: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-    },
-    transition: {
-      duration: 5,
-    },
-  };
-  const transition = {
-    duration: 0.5,
   };
 
   return (
@@ -32,8 +12,8 @@ const CaseStudyWishlist = () => {
       initial="initial"
       animate="enter"
       exit="exit"
-      transition={transition}
-      variants={caseStudyPage}>
+      variants={pageFade}
+      transition={pageFadeTransition}>
       <div className="bg-blue-800 text-center py-32">
         <h1 className="text-4xl mb-3">Wishlist</h1>
         <h2 className="text-xl">Full Stack Secret Santa Manager</h2>

@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import ModalProvider from './contexts/ModalContext';
 import ScrollToTop from './components/ScrollToTop';
 import WidthProvider from './contexts/WidthContext';
 
@@ -12,9 +11,7 @@ ReactDOM.render(
   <BrowserRouter>
     <ScrollToTop />
     <WidthProvider>
-      <ModalProvider>
-        <App />
-      </ModalProvider>
+      <App />
     </WidthProvider>
   </BrowserRouter>,
   document.getElementById('root')

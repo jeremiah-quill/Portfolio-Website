@@ -2,30 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import pic1 from './images/flow-with-megmo.png';
 import { motion } from 'framer-motion';
+import { pageFade, pageFadeTransition } from '../../animations/variants';
 
 const CaseStudyFWM = () => {
-  const caseStudyPage = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    enter: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-    },
-    transition: {
-      duration: 5,
-    },
-  };
-
-  const transition = {
-    duration: 0.5,
-  };
-
   const project = {
     headerDetails: {
       title: 'Flow with Megmo',
@@ -52,8 +31,8 @@ const CaseStudyFWM = () => {
       initial="initial"
       animate="enter"
       exit="exit"
-      variants={caseStudyPage}
-      transition={transition}>
+      variants={pageFade}
+      transition={pageFadeTransition}>
       <div className="bg-blue-800 text-center py-32">
         <motion.h1 className="text-4xl mb-3">Flow with Megmo</motion.h1>
         <h2 className="text-xl">Full Stack Marketing Page + Scheduling Tool</h2>

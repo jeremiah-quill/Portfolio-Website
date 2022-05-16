@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import FadeUp from '../animations/FadeUp';
-import { Fade } from 'react-awesome-reveal';
 import projectData from '../content/content.js';
 import Project from '../components/Project';
 import Contact from '../components/Contact';
 import Socials from '../components/Socials';
-import CustomLink from '../components/CustomLink';
 import { motion } from 'framer-motion';
+import { pageFade, pageFadeTransition } from '../animations/variants';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -15,39 +13,16 @@ const Home = () => {
     projectData[2],
   ]);
 
-  const home = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    enter: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-    },
-    transition: {
-      duration: 5,
-    },
-  };
-
-  const transition = {
-    duration: 0.5,
-  };
-
   return (
     <motion.div
       initial="initial"
       animate="enter"
       exit="exit"
-      variants={home}
-      transition={transition}
+      variants={pageFade}
+      transition={pageFadeTransition}
       className="main-container">
       <div className="inner-container">
         <div className="section-container">
-          {/* <FadeUp duration={1000} triggerOnce={true} fraction={0} cascade={true} damping={0.1}> */}
           <h1 className="section-title main-section-title">I'm Jeremiah Quill</h1>
           <h2 className="sub-title">Front-end developer</h2>
           <Socials />
@@ -86,10 +61,8 @@ const Home = () => {
               from you!
             </p>
           </div>
-          {/* </FadeUp> */}
         </div>
         <div className="section-container">
-          {/* <FadeUp duration={1000} triggerOnce={true} fraction={0} cascade={true} damping={0.1}> */}
           <h1 className="section-title">I'm constantly adding to my toolbox of skills</h1>
           <div className="skills-container">
             <p className="skills-description">
@@ -106,14 +79,6 @@ const Home = () => {
             <div>
               <h3 className="what-im-good-at">What I'm good at</h3>
               <ul className="skill-list">
-                {/* <Fade
-                    delay={1000}
-                    cascade={true}
-                    damping={0.25}
-                    triggerOnce
-                    direction="up"
-                    duration={500}
-                    fraction={0}> */}
                 <li className="pill">HTML</li>
                 <li className="pill">CSS</li>
                 <li className="pill">Javascript</li>
@@ -130,25 +95,13 @@ const Home = () => {
                 <li className="pill">Express</li>
                 <li className="pill">GraphQL</li>
                 <li className="pill">Apollo Client</li>
-                {/* </Fade> */}
               </ul>
             </div>
           </div>
-          {/* </FadeUp> */}
         </div>
         <div className="section-container">
-          {/* <FadeUp duration={1000} triggerOnce={true} fraction={0}> */}
           <h1 className="section-title">Take a look at my featured work</h1>
-          {/* </FadeUp> */}
           <ul className="project-list">
-            {/* <Fade
-              triggerOnce={true}
-              cascade={true}
-              damping={0.1}
-              direction="up"
-              duration={500}
-              fraction={0}
-              delay={500}> */}
             {featuredProjects.map((project, idx) => (
               <Project
                 caseStudyUrl={project.caseStudyUrl}
@@ -166,10 +119,8 @@ const Home = () => {
                 featuredText2={project.featuredText2}
               />
             ))}
-            {/* </Fade> */}
           </ul>
           <div className="flex justify-center">
-            {/* <Fade direction="up" delay={0} triggerOnce fraction={0}> */}
             <p>
               Or checkout my{` `}
               <a
@@ -180,15 +131,7 @@ const Home = () => {
                 Github.
               </a>
             </p>
-            {/* </Fade> */}
           </div>
-          {/* <div className="flex-center-container">
-            <Fade direction="up" delay={0} triggerOnce fraction={0}>
-              <CustomLink to="/work" className="btn secondary">
-                View all
-              </CustomLink>
-            </Fade>
-          </div> */}
         </div>
         <Contact />
       </div>
