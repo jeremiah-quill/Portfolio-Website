@@ -41,15 +41,16 @@ const CaseStudyPlaylists = () => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div>
+        <div style={{ aspectRatio: '1.6', filter: blur ? 'blur(20px)' : 'none' }}>
           <img
             className="rounded"
             alt="playlist palette"
             src={src}
             style={{
               filter: blur ? 'blur(20px)' : 'none',
-              transition: blur ? 'none' : 'filter 0.3s ease-out',
+              transition: 'filter 0.3s ease-out',
               width: '100%',
+              height: '100%',
             }}
           />
         </div>

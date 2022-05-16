@@ -5,16 +5,6 @@ import useProgressiveImg from '../../hooks/useProgressiveImg';
 import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
 
 const CaseStudyFWM = () => {
-  const ref = useRef();
-  const [width, setWidth] = useState(null);
-
-  useEffect(() => {
-    if (!ref.current) {
-      return;
-    }
-    setWidth(ref.current.getBoundingClientRect().width);
-  }, [ref]);
-
   const [src, { blur }] = useProgressiveImg(
     './images/case_studies/fwm/fwm_hero-small.png',
     './images/case_studies/fwm/fwm_hero.png'
@@ -71,15 +61,16 @@ const CaseStudyFWM = () => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div ref={ref}>
+        <div style={{ aspectRatio: '1.6', filter: blur ? 'blur(20px)' : 'none' }}>
           <img
             className="rounded"
             alt="flow with megmo"
             src={src}
             style={{
               filter: blur ? 'blur(20px)' : 'none',
-              transition: blur ? 'none' : 'filter 0.3s ease-out',
-              width: { width },
+              transition: 'filter 0.3s ease-out',
+              width: '100%',
+              height: '100%',
             }}
           />
           {/* <ProgressiveImg
