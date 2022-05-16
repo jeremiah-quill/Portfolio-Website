@@ -49,6 +49,7 @@ const CaseStudyPlaylists = () => {
             style={{
               filter: blur ? 'blur(20px)' : 'none',
               transition: blur ? 'none' : 'filter 0.3s ease-out',
+              width: '100%',
             }}
           />
         </div>
