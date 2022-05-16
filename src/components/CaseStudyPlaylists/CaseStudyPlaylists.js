@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
+import useProgressiveImg from '../../hooks/useProgressiveImg';
 
 const CaseStudyPlaylists = () => {
+  const [src, { blur }] = useProgressiveImg(
+    './images/case_studies/pp/pp_hero_small.png',
+    './images/case_studies/pp/pp_hero.png'
+  );
+
   const project = {
     technologies: ['React', 'MaterialUI'],
   };
@@ -37,9 +43,13 @@ const CaseStudyPlaylists = () => {
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
           <img
-            alt="playlist palette"
             className="rounded"
-            src="./images/case_studies/pp/pp_hero.png"
+            alt="playlist palette"
+            src={src}
+            style={{
+              filter: blur ? 'blur(20px)' : 'none',
+              transition: blur ? 'none' : 'filter 0.3s ease-out',
+            }}
           />
         </div>
         <div>

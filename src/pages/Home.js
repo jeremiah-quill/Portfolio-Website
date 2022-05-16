@@ -5,8 +5,14 @@ import Contact from '../components/Contact';
 import Socials from '../components/Socials';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../animations/variants';
+import useProgressiveImg from '../hooks/useProgressiveImg.js';
 
 const Home = () => {
+  const [src, { blur }] = useProgressiveImg(
+    './images/bio-img-compress_small.png',
+    './images/bio-img-compress.png'
+  );
+
   const [featuredProjects, setFeaturedProjects] = useState([
     projectData[0],
     projectData[1],
@@ -30,8 +36,12 @@ const Home = () => {
           <div className="bio-with-image">
             <img
               className="bio-img"
-              src="./images/bio-img-compress.png"
-              alt="Jeremiah with his son"
+              alt="Jeremiah"
+              src={src}
+              style={{
+                filter: blur ? 'blur(20px)' : 'none',
+                transition: blur ? 'none' : 'filter 0.3s ease-out',
+              }}
             />
             <p className="bio">
               I'm currently a freelance full stack developer with a wide range of skills and a

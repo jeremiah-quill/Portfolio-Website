@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
+import useProgressiveImg from '../../hooks/useProgressiveImg';
 
 const CaseStudyWishlist = () => {
+  const [src, { blur }] = useProgressiveImg(
+    './images/case_studies/wishlist/wishlist_hero_small.png',
+    './images/case_studies/wishlist/wishlist_hero.png'
+  );
+
   const project = {
     technologies: ['Express', 'NodeJS', 'Heroku', 'MySQL', 'Sequelize', 'Bcrypt', 'Nodemailer'],
   };
@@ -38,8 +44,12 @@ const CaseStudyWishlist = () => {
         <div>
           <img
             className="rounded"
-            src="./images/case_studies/wishlist/wishlist_hero.png"
             alt="wishlist"
+            src={src}
+            style={{
+              filter: blur ? 'blur(20px)' : 'none',
+              transition: blur ? 'none' : 'filter 0.3s ease-out',
+            }}
           />
         </div>
         <div>
