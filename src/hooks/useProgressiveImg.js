@@ -3,7 +3,7 @@ import React from 'react';
 const useProgressiveImg = (lowQualitySrc, highQualitySrc) => {
   const [src, setSrc] = React.useState(lowQualitySrc);
   React.useEffect(() => {
-    setSrc(lowQualitySrc);
+    // setSrc(lowQualitySrc);
     const img = new Image();
     img.src = highQualitySrc;
     img.onload = () => {

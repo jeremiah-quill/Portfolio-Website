@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
 import useProgressiveImg from '../../hooks/useProgressiveImg';
+import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
 
 const CaseStudyFWM = () => {
   const [src, { blur }] = useProgressiveImg(
@@ -61,7 +62,7 @@ const CaseStudyFWM = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img
+          {/* <img
             className="rounded"
             alt="flow with megmo"
             src={src}
@@ -69,6 +70,10 @@ const CaseStudyFWM = () => {
               filter: blur ? 'blur(20px)' : 'none',
               transition: blur ? 'none' : 'filter 0.3s ease-out',
             }}
+          /> */}
+          <ProgressiveImg
+            lowQualityImg={'./images/case_studies/fwm/fwm_hero-small.png'}
+            highQualityImg={'./images/case_studies/fwm/fwm_hero.png'}
           />
         </div>
         <div>

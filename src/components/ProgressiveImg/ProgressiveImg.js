@@ -2,6 +2,7 @@ import React from 'react';
 
 const ProgressiveImg = ({ lowQualityImg, highQualityImg }) => {
   const [isLoaded, setIsLoaded] = React.useState(false);
+
   return (
     <React.Fragment>
       <img
