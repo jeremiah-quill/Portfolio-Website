@@ -6,6 +6,7 @@ import Socials from '../components/Socials';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../animations/variants';
 import useProgressiveImg from '../hooks/useProgressiveImg.js';
+import ProgressiveImg from '../components/ProgressiveImg';
 
 const Home = () => {
   const [src, { blur }] = useProgressiveImg(
@@ -33,8 +34,8 @@ const Home = () => {
           <h2 className="sub-title">Front-end developer</h2>
           <Socials />
 
-          <div className="bio-with-image">
-            <img
+          <div className="bio-with-image" style={{ aspectRatio: '1' }}>
+            {/* <img
               className="bio-img"
               alt="Jeremiah"
               src={src}
@@ -42,6 +43,12 @@ const Home = () => {
                 filter: blur ? 'blur(20px)' : 'none',
                 transition: 'filter 0.3s ease-out',
               }}
+            /> */}
+            <ProgressiveImg
+              className="bio-img"
+              aspectRatio="1"
+              lowQualityImg={'./images/bio-img-compress_small.png'}
+              highQualityImg={'./images/bio-img-compress.png'}
             />
             <p className="bio">
               I'm currently a freelance full stack developer with a wide range of skills and a

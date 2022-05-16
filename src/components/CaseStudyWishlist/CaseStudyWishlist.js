@@ -42,13 +42,14 @@ const CaseStudyWishlist = () => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div style={{ aspectRatio: '1.6', filter: blur ? 'blur(20px)' : 'none' }}>
-          {/* <ProgressiveImg
+        <div style={{ aspectRatio: '1.6' }}>
+          <ProgressiveImg
+            aspectRatio="1.6"
             className="rounded"
             lowQualityImg={'./images/case_studies/wishlist/wishlist_hero_small.png'}
             highQualityImg={'./images/case_studies/wishlist/wishlist_hero.png'}
-          /> */}
-          <img
+          />
+          {/* <img
             className="rounded"
             alt="wishlist"
             src={src}
@@ -58,7 +59,7 @@ const CaseStudyWishlist = () => {
               width: '100%',
               height: '100%',
             }}
-          />
+          /> */}
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>

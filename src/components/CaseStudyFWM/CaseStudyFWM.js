@@ -61,8 +61,8 @@ const CaseStudyFWM = () => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div style={{ aspectRatio: '1.6', filter: blur ? 'blur(20px)' : 'none' }}>
-          <img
+        <div style={{ aspectRatio: '1.6' }}>
+          {/* <img
             className="rounded"
             alt="flow with megmo"
             src={src}
@@ -70,14 +70,15 @@ const CaseStudyFWM = () => {
               filter: blur ? 'blur(20px)' : 'none',
               transition: 'filter 0.3s ease-out',
               width: '100%',
-              height: '100%',
+              aspectRatio: '1.6',
             }}
-          />
-          {/* <ProgressiveImg
-            className="rounded"
-            lowQualityImg={'./images/case_studies/fwm/fwm_hero-small.png'}
-            highQualityImg={'./images/case_studies/fwm/fwm_hero.png'}
           /> */}
+          <ProgressiveImg
+            aspectRatio="1.6"
+            className="rounded"
+            lowQualityImg={'./images/case_studies/fwm/fwm_hero_small.png'}
+            highQualityImg={'./images/case_studies/fwm/fwm_hero.png'}
+          />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>

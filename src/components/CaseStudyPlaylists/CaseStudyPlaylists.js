@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
 import useProgressiveImg from '../../hooks/useProgressiveImg';
+import ProgressiveImg from '../ProgressiveImg';
 
 const CaseStudyPlaylists = () => {
   const [src, { blur }] = useProgressiveImg(
@@ -41,8 +42,8 @@ const CaseStudyPlaylists = () => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div style={{ aspectRatio: '1.6', filter: blur ? 'blur(20px)' : 'none' }}>
-          <img
+        <div style={{ aspectRatio: '1.6' }}>
+          {/* <img
             className="rounded"
             alt="playlist palette"
             src={src}
@@ -52,6 +53,12 @@ const CaseStudyPlaylists = () => {
               width: '100%',
               height: '100%',
             }}
+          /> */}
+          <ProgressiveImg
+            aspectRation="1.6"
+            className="rounded"
+            lowQualityImg={'./images/case_studies/pp/pp_hero_small.png'}
+            highQualityImg={'./images/case_studies/pp/pp_hero.png'}
           />
         </div>
         <div>
