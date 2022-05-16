@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Project({ caseStudyUrl, imgSrc, alt, title, description, stack, isFeatured }) {
+function Project({ caseStudyUrl, imgSrc, alt, title, description, stack }) {
   return (
     <Link to={`/${caseStudyUrl}`}>
       <li className={`project featured`}>

@@ -36,7 +36,11 @@ const CaseStudyPlaylists = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img alt="playlist palette" className="rounded" src="./images/playlists-featured-2.png" />
+          <img
+            alt="playlist palette"
+            className="rounded"
+            src="./images/case_studies/pp/pp_hero.png"
+          />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>
@@ -83,7 +87,7 @@ const CaseStudyPlaylists = () => {
           <img
             alt="playlist palette"
             className="rounded mb-5"
-            src="./images/playlists-featured-1.png"
+            src="./images/case_studies/pp/pp_login.gif"
           />
           <p className="text-xs text-left m-auto px-5">
             Spotify user authentication flow which approves access to read and write to user's
@@ -91,22 +95,15 @@ const CaseStudyPlaylists = () => {
           </p>
         </div>
         <div>
-          <img alt="playlist palette" className="rounded mb-5" src="./images/playlists.png" />
-          <p className="text-xs text-left m-auto px-5">
-            On the left of the screen is a bar containing user's playlists. There are 3 playlists
-            chosen and the green draggable inputs tell the app how many songs of each playlist to
-            include in the newly generated playlist.
-          </p>
-        </div>
-        <div>
           <img
             alt="playlist palette"
             className="rounded mb-5"
-            src="./images/playlists-featured-3.png"
+            src="./images/case_studies/pp/pp_new_playlist.gif"
           />
           <p className="text-xs text-left m-auto px-5">
-            Once the user has chosen their playlists and track amounts they can name their playlist
-            and export it to Spotify.
+            Add playlists to the "palette", drag inputs to the desired levels, and export your
+            playlist to Spotify. Your playlists are refreshed and you will see your new mix in the
+            sidebar.
           </p>
         </div>
         <div>

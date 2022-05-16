@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import pic1 from './images/flow-with-megmo.png';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
 
@@ -25,6 +23,8 @@ const CaseStudyFWM = () => {
       'Nodemailer',
     ],
   };
+
+  // title, subtitle, liveLink, codeLink, summary, technologies, notable features, feature spotlight, figures, conclusion, key takeaways
 
   return (
     <motion.div
@@ -55,7 +55,11 @@ const CaseStudyFWM = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img className="rounded" alt="flow with megmo" src="./images/flow-with-megmo.png" />
+          <img
+            className="rounded"
+            alt="flow with megmo"
+            src="./images/case_studies/fwm/fwm_hero.png"
+          />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>
@@ -110,46 +114,42 @@ const CaseStudyFWM = () => {
           <img
             className="rounded mb-5"
             alt="flow with megmo"
-            src="./images/admin-dashboard-view-min.png"
+            src="./images/case_studies/fwm/fwm_landing.gif"
           />
           <p className="text-xs text-left m-auto px-5">
-            The admin dashboard is where my wife has control over her scheduled and completed
+            The initial landing page contains marketing information and a page transition when
+            moving to and from the student dashboard.
+          </p>
+        </div>
+        <div>
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/case_studies/fwm/fwm_crud.gif"
+          />
+          <p className="text-xs text-left m-auto px-5">
+            The admin has control over creating, updating, and deleting classes.
+          </p>
+        </div>
+        <div>
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/case_studies/fwm/fwm_playlist.gif"
+          />
+          <p className="text-xs text-left m-auto px-5">
+            Students are able to view the Spotify playlist used in previous classes.
+          </p>
+        </div>
+        <div>
+          <img
+            className="rounded mb-5"
+            alt="flow with megmo"
+            src="./images/case_studies/fwm/fwm_register_class.gif"
+          />
+          <p className="text-xs text-left m-auto px-5">
+            Students are able to view and register for available classes, and cancel registered
             classes.
-          </p>
-        </div>
-        <div>
-          <img
-            className="rounded mb-5"
-            alt="flow with megmo"
-            src="./images/create-class-view-min.png"
-          />
-          <p className="text-xs text-left m-auto px-5">
-            Selecting and submitting class details through a form within the model context.
-            Submitting this form creates a zoom meeting and adds the class to the public schedule.
-          </p>
-        </div>
-        <div>
-          <img
-            className="rounded mb-5"
-            alt="flow with megmo"
-            src="./images/dashboard-view-min.png"
-          />
-          <p className="text-xs text-left m-auto px-5">
-            On the student dashboard user's can view, sign up for, and cancel classes that appear on
-            the public schedule.
-          </p>
-        </div>
-        <div>
-          <img
-            className="rounded mb-5"
-            alt="flow with megmo"
-            src="./images/register-class-view-min.png"
-          />
-          <p className="text-xs text-left m-auto px-5">
-            After confirming registration for a class, students are shown a custom made QR code
-            which sends them to a payment to my wife's venmo, pre-configured with the corresponding
-            class fee. We decided against using a payment processor to reduce costs due to this
-            being a side hobby for my wife, and rely on the honor system for user's to send payment.
           </p>
         </div>
         <div>

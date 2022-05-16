@@ -1,5 +1,80 @@
 const projectData = [
   {
+    // title: 'Flow with Megmo',
+    subtitle: 'Full stack marketing page + scheduling tool',
+    // liveLink: 'http://www.flowwithmegmo.com/',
+    // codeLink: 'https://github.com/jeremiah-quill/flow-with-megmo',
+    summary:
+      'Flow with Megmo is a full stack landing page and dashboard scheduling tool built in React. I built this website from scratch for my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes. She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the available schedule.',
+    technologies: [
+      'React',
+      'Express',
+      'NodeJS',
+      'Heroku',
+      'GraphQL',
+      'Apollo',
+      'React Router',
+      'React Transition Group',
+      'MongoDB',
+      'Mongoose',
+      'Bcrypt',
+      'Nodemailer',
+    ],
+    notableFeatures: [
+      'User authentication',
+      'Admin dashboard',
+      'Student dashboard',
+      'Spotify & Zoom API Integration',
+      'Automated email notifications',
+      'Animated route transitions',
+      'Global modals and toasts',
+    ],
+    featureSpotlight: {
+      title: 'Spotify & Zoom API Integration',
+      content:
+        "Since my wife's classes are hosted through Zoom, the admin dashboard I built allows her to interact with the Zoom API to create, delete, and update Zoom meetings. Submitting the create class form fires an API call to Zoom which creates a meeting at her selected date and time. The newly created Zoom meeting ID and details are added to my Mongo database, where GraphQL queries fetch this data to display it on the schedule available to students. The other feature I added to the admin dashboard is the ability for my wife to add her Spotify playlist to completed classes to share with her students. I fetch my wife's Spotify playlists through the Spotify API and display them in a list so she is able to choose which playlist she used for each completed class",
+    },
+    figures: [
+      {
+        imgUrl: './images/admin-dashboard-view-min.png',
+        caption:
+          'The admin dashboard is where my wife has control over her scheduled and completed classes.',
+      },
+      {
+        imgUrl: './images/create-class-view-min.png',
+        caption:
+          'Selecting and submitting class details through a form within the model context. Submitting this form creates a zoom meeting and adds the class to the public schedule.',
+      },
+      {
+        imgUrl: './images/dashboard-view-min.png',
+        caption:
+          "On the student dashboard user's can view, sign up for, and cancel classes that appear on the public schedule.",
+      },
+      {
+        imgUrl: './images/register-class-view-min.png',
+        caption:
+          "After confirming registration for a class, students are shown a custom made QR code which sends them to a payment to my wife's venmo, pre-configured with the corresponding class fee. We decided against using a payment processor to reduce costs due to this being a side hobby for my wife, and rely on the honor system for user's to send payment.",
+      },
+    ],
+    conclusion:
+      "Overall I am happy with Flow with Megmo. I was able to complete everything on my checklist and begin learning some new techniques (page transitions) and technologies (graphQL, Apollo) along the way. Even more than the end product itself, I am most proud of the lessons I've taken from the experience building it.",
+    keyTakeaways: [
+      {
+        title: 'Have a clear direction for every decision',
+        content:
+          'The night before my presentation I realized I wanted to separate out the static sections into a landing page and keep the scheduling functionality on a separate dashboard page. I worked all night to entirely overhaul the layout and completed it on time, however, if I had taken the time to properly plan this out from the beginning I think I could have been able to make this decision before building the entire project.',
+      },
+      {
+        title: "Don't underestimate the complexity of state",
+        content:
+          "When I originally planned out this project I did not expect the state management to become so complex. Turns out keeping a dashboard and database in sync is hard! Utilizing features like Apollo's polling and caching, React's useReducer, or Redux, I could have made my life much easier.",
+      },
+      {
+        title: 'Learn a component library or alternate styling solution',
+        content:
+          'I wrote plain CSS to style the entire landing page and dashboard, and I will probably never do that again. To achieve a cohesive design and layout, I will reach for component libraries like MaterialUI, CSS frameworks like Tailwind, or styling solutions like SASS or Styled Components',
+      },
+    ],
     caseStudyUrl: 'flow-with-megmo',
     imgSrc: './images/flow-with-megmo.png',
     alt: 'flow with megmo screenshot',
@@ -9,18 +84,6 @@ const projectData = [
     stack: 'React, Mongo, Express, Node, GraphQL, Heroku, HTML',
     liveLink: 'http://www.flowwithmegmo.com/',
     codeLink: 'https://github.com/jeremiah-quill/flow-with-megmo',
-    // featuredImgs: [
-    //   { img: './images/admin-dashboard-view-min.png', idx: 0 },
-    //   { img: './images/fwm-hero-view-min.png', idx: 1 },
-    //   { img: './images/register-class-view-min.png', idx: 2 },
-    //   { img: './images/dashboard-view-min.png', idx: 3 },
-    //   { img: './images/playlist-selection-view-min.png', idx: 4 },
-    //   { img: './images/create-class-view-min.png', idx: 5 },
-    // ],
-    // featuredText1:
-    //   "Flow with Megmo is a full stack landing page and web app built for a yoga instructor who is beginning an online yoga studio.  The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes.  She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the client's published schedule.  Requirements included mobile responsiveness, user authentication, an admin dashboard, a production database, and automated customer email communciation.  I built a custom admin dashboard where the yoga teacher is able to create, update, and delete the classes on her schedule through the Zoom API.",
-    // featuredText2:
-    //   "The app was built with the MERN stack and leverages Apollo/GraphQL to keep the database and UI in sync.  I configured Nodemailer to automate the sending of class links, class updates, and class confirmations to necessary students.  I also incorporated the Spotify API to pull in the client's spotify playlists used during class allowing her students to discover the music that inspired their workouts.  Flow with Megmo is deployed to Heroku and I continue to provide developmental support.",
   },
   {
     caseStudyUrl: 'wishlist',
@@ -32,15 +95,6 @@ const projectData = [
     stack: 'Javascript, MySQL, Express, Node, Heroku, HTML, CSS',
     liveLink: 'https://wishlistmanager.herokuapp.com/',
     codeLink: 'https://github.com/jeremiah-quill/gift-exchange-manager',
-    // featuredImgs: [
-    //   { img: './images/wishlist-featured-2.png', idx: 0 },
-    //   { img: './images/wishlist-featured-1.png', idx: 1 },
-    //   { img: './images/wishlist-featured-3.png', idx: 2 },
-    // ],
-    // featuredText1:
-    //   'I worked in a team of 3 to design and develop a full stack tool for managing secret santa gift exchanges.  Users are able to sign up or login, create or join a private group, and maintain an updated wishlist of gift ideas.  Once a group is ready, the leader is able to randomize the choosing of secret santas and each person’s wishlist is shared only with their secret santa.  We focused on user experience, automation, and mobile responsiveness.  I took on a leadership role in the team organizing planning sessions, constantly re-aligning on the status of features, and making sure our goals were going to be met.  ',
-    // featuredText2:
-    //   'The product was built with a Javascript, Express, Node, and MySQL stack.  The front end was built with the handlebars templating engine.  On the technical side I handled the internal javascript logic, the REST API routes and MySQL database queries, and configuring Nodemailer and node-cron for automated email notifications.  I also deployed the finished product to Heroku.  This project was a challenge to complete in less than 2 months but we delivered on all of our goals and produced a quality product.',
   },
   {
     caseStudyUrl: 'playlist-palette',
@@ -52,15 +106,6 @@ const projectData = [
     stack: 'React, MaterialUI, HTML, CSS',
     liveLink: 'https://jeremiah-quill.github.io/spotify-playlists/',
     codeLink: 'https://github.com/jeremiah-quill/spotify-playlists',
-    // featuredImgs: [
-    //   { img: './images/playlists-featured-2.png', idx: 0 },
-    //   { img: './images/playlists-featured-1.png', idx: 1 },
-    //   { img: './images/playlists-featured-3.png', idx: 2 },
-    // ],
-    // featuredText1:
-    //   'I designed and developed a web app for creating randomized playlists in Spotify through the Spotify API.  Users are able to scroll through their spotify playlists and choose which playlists to work with.  A slider appears to control how many songs from each playlist will be pulled into their new creation.  When the user is finished tweaking the sliders to their liking they are able to generate a new playlist which randomly chooses songs from each selection based on the slider values.  This new playlist is added to their official spotify account with the click of a button.',
-    // featuredText2:
-    //   'This app was built in React and leverages MaterialUI for clean and sleek component design.  Navigating the Spotify API was a big challenge in building this tool and required custom recursion logic to paginate through songs and playlists programmatically.',
   },
   // {
   //   imgSrc: './images/hero-helper.png',
@@ -80,33 +125,6 @@ const projectData = [
   //   stack: 'Javascript, Express, Mongo, Node, HTML, CSS',
   //   liveLink: 'http://www.reciperundown.com/',
   //   codeLink: 'https://github.com/jeremiah-quill/recipe-rundown',
-  // },
-  // {
-  //   imgSrc: './images/room-homepage.png',
-  //   alt: 'room homepage screenshot',
-  //   title: 'E-commerce Homepage',
-  //   description: 'A prototype for a mobile responsive e-commerce landing page.',
-  //   stack: 'React, HTML, CSS',
-  //   liveLink: 'https://jeremiah-quill.github.io/room-homepage/',
-  //   codeLink: 'https://github.com/jeremiah-quill/room-homepage',
-  // },
-  // {
-  //   imgSrc: './images/e-commerce-product.png',
-  //   alt: 'e-commerce product page screenshot',
-  //   title: 'E-Commerce Product',
-  //   description: 'A prototype of a mobile responsive e-commerce product page.',
-  //   stack: 'React, HTML, CSS',
-  //   liveLink: 'https://jeremiah-quill.github.io/react-product-page/',
-  //   codeLink: 'https://github.com/jeremiah-quill/react-product-page',
-  // },
-  // {
-  //   imgSrc: './images/manage.png',
-  //   alt: 'Manage SaaS product screenshot',
-  //   title: 'SaaS Landing Page',
-  //   description: 'A prototype of a mobile responsive SaaS product landing page.',
-  //   stack: 'HTML, CSS',
-  //   liveLink: 'https://jeremiah-quill.github.io/manage-landing-page/',
-  //   codeLink: 'https://github.com/jeremiah-quill/manage-landing-page',
   // },
 ];
 

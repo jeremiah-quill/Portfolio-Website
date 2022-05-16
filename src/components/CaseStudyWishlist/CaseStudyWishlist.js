@@ -36,7 +36,11 @@ const CaseStudyWishlist = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div>
-          <img className="rounded" src="./images/wishlist.png" alt="wishlist" />
+          <img
+            className="rounded"
+            src="./images/case_studies/wishlist/wishlist_hero.png"
+            alt="wishlist"
+          />
         </div>
         <div>
           <h3 className="text-center mb-5 text-2xl">Summary</h3>
@@ -85,28 +89,36 @@ const CaseStudyWishlist = () => {
           </p>
         </div>
         <div>
-          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-1.png" />
+          <img
+            alt="wishlist"
+            className="rounded mb-5"
+            src="./images/case_studies/wishlist/wishlist_add_gift.gif"
+          />
           <p className="text-xs text-left m-auto px-5">
-            On the personal dashboard page users are able to add gifts to their wishlist, as well as
-            create or view groups.
+            On the personal dashboard page users are able to add and update gifts on their wishlist.
           </p>
         </div>
         <div>
-          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-2.png" />
+          <img
+            alt="wishlist"
+            className="rounded mb-5"
+            src="./images/case_studies/wishlist/wishlist_new_group.gif"
+          />
           <p className="text-xs text-left m-auto px-5">
-            The create group form, where a user is able to create a new secret santa group. Once
-            created, the group owner will be able to share a group password so others are able to
-            join.
+            Users are able to create groups and share a group ID and password so others can join.
+            When ready the group leader has access to a button which randomly draws names for the
+            exchange.
           </p>
         </div>
         <div>
-          <img alt="wishlist" className="rounded mb-5" src="./images/wishlist-featured-3.png" />
+          <img
+            alt="wishlist"
+            className="rounded mb-5"
+            src="./images/case_studies/wishlist/wishlist_group_view.gif"
+          />
           <p className="text-xs text-left m-auto px-5">
-            The group dashboard contains group details and a shareable group ID and password for
-            others to join. The user who created the group has access to a form to update the group
-            name, date, and price limit. The group leader is also given access to a "draw names"
-            button. Once drawn, each member of the group will be randomly assigned another member as
-            their secret santa and access to view their assigned member's wishlist.
+            Once names are drawn, users are able to view the wishlist of the group member they were
+            assigned.
           </p>
         </div>
         <div>
