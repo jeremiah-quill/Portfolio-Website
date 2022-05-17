@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
-import useProgressiveImg from '../../hooks/useProgressiveImg';
 import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
 
 const CaseStudyWishlist = () => {
-  const [src, { blur }] = useProgressiveImg(
-    './images/case_studies/wishlist/wishlist_hero_small.png',
-    './images/case_studies/wishlist/wishlist_hero.png'
-  );
-
   const project = {
     technologies: ['Express', 'NodeJS', 'Heroku', 'MySQL', 'Sequelize', 'Bcrypt', 'Nodemailer'],
   };

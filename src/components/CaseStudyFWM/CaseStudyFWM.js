@@ -1,15 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
-import useProgressiveImg from '../../hooks/useProgressiveImg';
 import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
 
 const CaseStudyFWM = () => {
-  const [src, { blur }] = useProgressiveImg(
-    './images/case_studies/fwm/fwm_hero-small.png',
-    './images/case_studies/fwm/fwm_hero.png'
-  );
-
   const project = {
     headerDetails: {
       title: 'Flow with Megmo',
@@ -30,8 +24,6 @@ const CaseStudyFWM = () => {
       'Nodemailer',
     ],
   };
-
-  // title, subtitle, liveLink, codeLink, summary, technologies, notable features, feature spotlight, figures, conclusion, key takeaways
 
   return (
     <motion.div
@@ -62,17 +54,6 @@ const CaseStudyFWM = () => {
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
         <div style={{ aspectRatio: '1.6' }}>
-          {/* <img
-            className="rounded"
-            alt="flow with megmo"
-            src={src}
-            style={{
-              filter: blur ? 'blur(20px)' : 'none',
-              transition: 'filter 0.3s ease-out',
-              width: '100%',
-              aspectRatio: '1.6',
-            }}
-          /> */}
           <ProgressiveImg
             aspectRatio="1.6"
             className="rounded"

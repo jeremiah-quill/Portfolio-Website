@@ -5,15 +5,9 @@ import Contact from '../components/Contact';
 import Socials from '../components/Socials';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../animations/variants';
-import useProgressiveImg from '../hooks/useProgressiveImg.js';
 import ProgressiveImg from '../components/ProgressiveImg';
 
 const Home = () => {
-  const [src, { blur }] = useProgressiveImg(
-    './images/bio-img-compress_small.png',
-    './images/bio-img-compress.png'
-  );
-
   const [featuredProjects, setFeaturedProjects] = useState([
     projectData[0],
     projectData[1],
@@ -35,15 +29,6 @@ const Home = () => {
           <Socials />
 
           <div className="bio-with-image">
-            {/* <img
-              className="bio-img"
-              alt="Jeremiah"
-              src={src}
-              style={{
-                filter: blur ? 'blur(20px)' : 'none',
-                transition: 'filter 0.3s ease-out',
-              }}
-            /> */}
             <ProgressiveImg
               className="bio-img"
               aspectRatio="1"
@@ -51,23 +36,19 @@ const Home = () => {
               highQualityImg={'./images/bio-img-compress.png'}
             />
             <p className="bio">
-              I'm currently a freelance full stack developer with a wide range of skills and a
-              passion for learning. I am mostly self-taught but I don't let it hold me back from
-              reaching my potential as a creator on the web. When learning on my own became
-              overwhelming, as it can in the ever-changing world of web development, I enrolled and
-              graduated from a full stack bootcamp offered by University of Pennsylvania.
+              I'm a self-taught deveoper with a wide range of skills across the stack and a passion
+              for learning. I recently graduated from a full stack bootcamp offered by UPenn where I
+              was able to refine my skills and experienced working as part of a team.
               <br></br>
               <br></br>
               My background is in finanace and accounting, specifically in the corporate real estate
               industry, which has given me invaluable experience as a professional. I am organized,
-              work well on my own or with others, and enjoy solving problems.
+              work well on my own or as part of a team, and understand how to manage to a deadline.
               <br></br>
               <br></br>
-              As a father and husband, I want to make my family proud. It's why I decided to take
-              the road less traveled and build a new career in the first place. It's why I continue
-              to grind every day to improve as a developer. I want to prove to myself and set an
-              example for my son that at 30, it's not too late to re-invent yourself and find
-              success in your passions.
+              That's my son, Remi, you see over there. He's a cool little dude. I want to show him
+              as he grows up that it's never too late to re-invent yourself and find success in your
+              passions. That's why I continue to grind every day to improve as a developer.
               <br></br>
               <br></br>
               I'm currently available for{' '}
@@ -121,6 +102,7 @@ const Home = () => {
           <ul className="project-list">
             {featuredProjects.map((project, idx) => (
               <Project
+                project={project}
                 caseStudyUrl={project.caseStudyUrl}
                 key={idx}
                 imgSrc={project.imgSrc}
@@ -137,7 +119,7 @@ const Home = () => {
               />
             ))}
           </ul>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <p>
               Or checkout my{` `}
               <a

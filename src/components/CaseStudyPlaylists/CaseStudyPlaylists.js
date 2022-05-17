@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageFade, pageFadeTransition } from '../../animations/variants';
-import useProgressiveImg from '../../hooks/useProgressiveImg';
 import ProgressiveImg from '../ProgressiveImg';
 
 const CaseStudyPlaylists = () => {
-  const [src, { blur }] = useProgressiveImg(
-    './images/case_studies/pp/pp_hero_small.png',
-    './images/case_studies/pp/pp_hero.png'
-  );
-
   const project = {
     technologies: ['React', 'MaterialUI'],
   };

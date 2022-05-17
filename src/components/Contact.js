@@ -90,7 +90,6 @@ function Contact() {
 
   return (
     <div className="section-container">
-      {/* <FadeUp triggerOnce duration={1000} fraction={0}> */}
       <h1 className="section-title">
         Want to collaborate, have an open role, or just want to get in touch?
       </h1>
@@ -131,12 +130,11 @@ function Contact() {
           </button>
         </div>
       </form>
-      <div className="contact-note-container">
+      <div className="contact-note-container mt-5">
         <p>
           (or just email me @ <span className="accent-orange-text">jcq5010@gmail.com</span>)
         </p>
       </div>
-      {/* </FadeUp> */}
     </div>
   );
 }

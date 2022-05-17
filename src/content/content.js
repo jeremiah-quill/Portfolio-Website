@@ -2,6 +2,8 @@ const projectData = [
   {
     // title: 'Flow with Megmo',
     subtitle: 'Full stack marketing page + scheduling tool',
+    featuredImgSmall: './images/case_studies/fwm/fwm_hero-small.png',
+    featuredImgBig: './images/case_studies/fwm/fwm_hero.png',
     // liveLink: 'http://www.flowwithmegmo.com/',
     // codeLink: 'https://github.com/jeremiah-quill/flow-with-megmo',
     summary:
@@ -81,7 +83,21 @@ const projectData = [
     title: 'Flow with Megmo',
     description:
       'A full stack marketing page + scheduling tool for an online yoga instructor. Production site launched February 2022.',
-    stack: 'React, Mongo, Express, Node, GraphQL, Heroku, HTML',
+    stack: [
+      'React',
+      'Express',
+      'NodeJS',
+      'Heroku',
+      'GraphQL',
+      'Apollo',
+      'React Router',
+      'React Transition Group',
+      'MongoDB',
+      'Mongoose',
+      'Bcrypt',
+      'Nodemailer',
+    ],
+
     liveLink: 'http://www.flowwithmegmo.com/',
     codeLink: 'https://github.com/jeremiah-quill/flow-with-megmo',
   },
@@ -92,7 +108,7 @@ const projectData = [
     title: 'Wishlist',
     description:
       'Manage your secret santa exchanges in one place. Create wishlists to share with others so they know what to get you.',
-    stack: 'Javascript, MySQL, Express, Node, Heroku, HTML, CSS',
+    stack: ['Javascript', 'MySQL', 'Express', 'Node', 'Heroku', 'HTML', 'CSS'],
     liveLink: 'https://wishlistmanager.herokuapp.com/',
     codeLink: 'https://github.com/jeremiah-quill/gift-exchange-manager',
   },
@@ -103,7 +119,7 @@ const projectData = [
     title: 'Playlists',
     description:
       "A tool for creating randomized Spotify playlists on the fly.  Utilizes Spotify API with implicit grant flow to access user's spotify playlists.",
-    stack: 'React, MaterialUI, HTML, CSS',
+    stack: ['React', 'MaterialUI', 'HTML', 'CSS'],
     liveLink: 'https://jeremiah-quill.github.io/spotify-playlists/',
     codeLink: 'https://github.com/jeremiah-quill/spotify-playlists',
   },
