@@ -38,7 +38,7 @@ const Home = () => {
             <p className="bio">
               I'm a self-taught deveoper with a wide range of skills across the stack and a passion
               for learning. I recently graduated from a full stack bootcamp offered by UPenn where I
-              was able to refine my skills and experienced working as part of a team.
+              was able to refine my skills and experience working as part of a team.
               <br></br>
               <br></br>
               My background is in finanace and accounting, specifically in the corporate real estate
