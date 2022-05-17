@@ -1,7 +1,7 @@
 const projectData = [
   {
     subtitle: 'Full stack marketing page + scheduling tool',
-    featuredImgSmall: './images/case_studies/fwm/fwm_hero-small.png',
+    featuredImgSmall: './images/case_studies/fwm/fwm_hero_small.png',
     featuredImgBig: './images/case_studies/fwm/fwm_hero.png',
     summary:
       'Flow with Megmo is a full stack landing page and dashboard scheduling tool built in React. I built this website from scratch for my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes. She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the available schedule.',
@@ -82,7 +82,7 @@ const projectData = [
   },
   {
     subtitle: 'Full stack secret santa manager',
-    featuredImgSmall: './images/case_studies/wishlist/wishlist_hero-small.png',
+    featuredImgSmall: './images/case_studies/wishlist/wishlist_hero_small.png',
     featuredImgBig: './images/case_studies/wishlist/wishlist_hero.png',
     summary:
       'Wishlist is a full stack app I built in Javascript with two other developers to help manage secret santa gift exchanges. Users can create and join groups, and create and maintain a wishlist of gift ideas to be shared. Once a group is ready, the leader is able to randomize the choosing of secret santas and each user’s wishlist is shared only with their secret santa. I took a leadership role on the team and handled the business logic on both the front and back end while my teammates handled routing and design.',
@@ -138,7 +138,7 @@ const projectData = [
   },
   {
     subtitle: 'Spotify playlist randomizer',
-    featuredImgSmall: './images/case_studies/pp/pp_hero-small.png',
+    featuredImgSmall: './images/case_studies/pp/pp_hero_small.png',
     featuredImgBig: './images/case_studies/pp/pp_hero.png',
     summary:
       'Playlist Palette is an app built with React that curates randomized playlists. I came up with the idea because I organize all of my playlists by similar music type (lofi beats, house, blues, etc.) and would often find myself wanting to combine multiple playlists into one for a specific occasion. This tool gives users the ability to select from their pre-existing playlists, choose how many songs to use, generated a playlist based on these conditions, and finally export the newly generated playlist to Spotify.',
