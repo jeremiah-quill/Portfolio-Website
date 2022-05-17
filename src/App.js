@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence exitBeforeEnter initial={true}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
