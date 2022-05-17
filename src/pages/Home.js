@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import projectData from '../content/content.js';
 import Project from '../components/Project';
 import Contact from '../components/Contact';
@@ -8,12 +8,6 @@ import { pageFade, pageFadeTransition } from '../animations/variants';
 import ProgressiveImg from '../components/ProgressiveImg';
 
 const Home = () => {
-  const [featuredProjects, setFeaturedProjects] = useState([
-    projectData[0],
-    projectData[1],
-    projectData[2],
-  ]);
-
   return (
     <motion.div
       initial="initial"
@@ -100,23 +94,8 @@ const Home = () => {
         <div className="section-container">
           <h1 className="section-title">Take a look at my featured work</h1>
           <ul className="project-list">
-            {featuredProjects.map((project, idx) => (
-              <Project
-                project={project}
-                caseStudyUrl={project.caseStudyUrl}
-                key={idx}
-                imgSrc={project.imgSrc}
-                alt={project.alt}
-                title={project.title}
-                description={project.description}
-                stack={project.stack}
-                liveLink={project.liveLink}
-                codeLink={project.codeLink}
-                isFeatured={project.isFeatured}
-                featuredImgs={project.featuredImgs}
-                featuredText1={project.featuredText1}
-                featuredText2={project.featuredText2}
-              />
+            {projectData.map((project, idx) => (
+              <Project project={project} key={idx} />
             ))}
           </ul>
           <div className="flex justify-center mt-5">
@@ -126,7 +105,7 @@ const Home = () => {
                 className="text-orange-accent font-bold hover:underline"
                 href="https://github.com/jeremiah-quill"
                 target="_blank"
-                rel="noopener">
+                rel="noreferrer">
                 Github.
               </a>
             </p>
