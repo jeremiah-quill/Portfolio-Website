@@ -1,11 +1,8 @@
 const projectData = [
   {
-    // title: 'Flow with Megmo',
     subtitle: 'Full stack marketing page + scheduling tool',
     featuredImgSmall: './images/case_studies/fwm/fwm_hero-small.png',
     featuredImgBig: './images/case_studies/fwm/fwm_hero.png',
-    // liveLink: 'http://www.flowwithmegmo.com/',
-    // codeLink: 'https://github.com/jeremiah-quill/flow-with-megmo',
     summary:
       'Flow with Megmo is a full stack landing page and dashboard scheduling tool built in React. I built this website from scratch for my wife, a yoga instructor who is beginning an online yoga studio. The goal was to build a tool to help manage the process of scheduling, requesting payment, and handling any communications regarding upcoming yoga classes. She needed her students to be able to sign in as a user and register for class, where they would then be able to view and interact with the available schedule.',
     technologies: [
