@@ -576,6 +576,7 @@ label {
   .bio-with-image {
     display: flex;
     align-items: center;
+    margin-top: 7rem;
   }
 
   .bio-img {

@@ -34,7 +34,7 @@ const Home = () => {
           <h2 className="sub-title">Front-end developer</h2>
           <Socials />
 
-          <div className="bio-with-image" style={{ aspectRatio: '1' }}>
+          <div className="bio-with-image">
             {/* <img
               className="bio-img"
               alt="Jeremiah"
