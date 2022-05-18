@@ -73,7 +73,7 @@ const CaseStudy = ({ project }) => {
           <h3 className="text-center mb-5 text-2xl">Notable Features</h3>
           <ul className="flex flex-col items-center">
             {notableFeatures.map((feature) => (
-              <li>{feature}</li>
+              <li key={feature}>{feature}</li>
             ))}
           </ul>
         </div>
@@ -82,7 +82,7 @@ const CaseStudy = ({ project }) => {
           <p>{featureSpotlight.content}</p>
         </div>
         {figures.map((figure) => (
-          <div>
+          <div key={figure.imgUrl}>
             <img className="rounded mb-5" alt={title} src={figure.imgUrl} />
             <p className="text-xs text-left m-auto px-5 text-center">{figure.caption}</p>
           </div>
@@ -91,7 +91,7 @@ const CaseStudy = ({ project }) => {
           <h3 className="text-center mb-5 text-2xl">Key Takeaways</h3>
           <ul className="flex flex-col gap-5 mt-10 px-5">
             {keyTakeaways.map((takeaway) => (
-              <li>
+              <li key={takeaway.title}>
                 <h4 className="mb-3 text-center text-lg text-orange-accent italic">
                   {takeaway.title}
                 </h4>

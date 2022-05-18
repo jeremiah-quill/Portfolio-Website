@@ -12,7 +12,13 @@ function App() {
   const location = useLocation();
 
   const caseStudyRoutes = projectData.map((project) => {
-    return <Route path={`/${project.caseStudyUrl}`} element={<CaseStudy project={project} />} />;
+    return (
+      <Route
+        key={project.caseStudyUrl}
+        path={`/${project.caseStudyUrl}`}
+        element={<CaseStudy project={project} />}
+      />
+    );
   });
 
   return (
