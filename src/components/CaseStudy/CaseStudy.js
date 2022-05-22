@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { pageFade, pageFadeTransition } from '../../animations/variants';
-import ProgressiveImg from '../ProgressiveImg/ProgressiveImg';
+import React from "react";
+import { motion } from "framer-motion";
+import { pageFade, pageFadeTransition } from "../../animations/variants";
+import ProgressiveImg from "../ProgressiveImg/ProgressiveImg";
 
 const CaseStudy = ({ project }) => {
   const {
@@ -47,7 +47,7 @@ const CaseStudy = ({ project }) => {
         </div>
       </div>
       <div className="p-5 max-w-screen-lg m-auto flex flex-col gap-40 my-20">
-        <div style={{ aspectRatio: '1.6' }}>
+        <div style={{ aspectRatio: "1.6" }}>
           <ProgressiveImg
             aspectRatio="1.6"
             className="rounded"
@@ -84,7 +84,7 @@ const CaseStudy = ({ project }) => {
         {figures.map((figure) => (
           <div key={figure.imgUrl}>
             <img className="rounded mb-5" alt={title} src={figure.imgUrl} />
-            <p className="text-xs text-left m-auto px-5 text-center">{figure.caption}</p>
+            <p className="text-xs m-auto px-5 text-center">{figure.caption}</p>
           </div>
         ))}
         <div>
