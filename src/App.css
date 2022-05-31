@@ -9,7 +9,7 @@
 * {
   box-sizing: border-box;
   /* font-family: 'dosis', arial; */
-  font-family: 'poppins', arial;
+  font-family: "poppins", arial;
   /* color: white; */
 }
 
@@ -118,7 +118,7 @@ ul {
 nav {
   color: var(--dark-main);
   display: flex;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   gap: 10px;
 }
 
@@ -144,7 +144,7 @@ section {
   padding: 0em 1em 1em 1em;
   text-align: center;
   margin-top: 3em;
-  font-family: 'scada', arial;
+  font-family: "scada", arial;
 }
 
 .main-section-title {
@@ -196,13 +196,13 @@ section {
 .socials-container-top {
   display: flex;
   margin: 2em 0;
-
+  gap: 1em;
   justify-content: center;
 }
 
-.socials-container-top > a {
+/* .socials-container-top > a {
   margin-right: 1em;
-}
+} */
 
 /* Skills */
 
