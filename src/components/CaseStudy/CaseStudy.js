@@ -34,14 +34,14 @@ const CaseStudy = ({ project }) => {
             rel="noreferrer"
             href={liveLink}
             target="_blank"
-            className="bg-black text-white py-2 px-5 rounded">
+            className="bg-black text-white py-2 px-5 rounded hover:bg-slate-600">
             Live
           </a>
           <a
             rel="noreferrer"
             href={codeLink}
             target="_blank"
-            className="bg-black text-white py-2 px-5 rounded">
+            className="bg-black text-white py-2 px-5 rounded hover:bg-slate-600">
             Repo
           </a>
         </div>

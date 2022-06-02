@@ -241,25 +241,14 @@ section {
 
 /* Projects */
 
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .project {
-  max-width: 300px;
   padding: 1em;
   border-radius: 25px;
   background: var(--light-main);
-  margin-bottom: 2em;
-  margin-right: 1em;
-  margin-left: 1em;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  /* height: 550px; */
 }
 
 .read-more.featured {
@@ -300,24 +289,12 @@ section {
   font-size: 16px;
 }
 
-.image-container > img {
-  /* border-radius: 15px; */
-  /* object-fit: cover; */
-}
-
 .image-container {
-  min-height: 180px;
-  height: 180px;
-  /* object-fit: cover; */
   border-radius: 15px;
   overflow: hidden;
   position: relative;
   border: 1px solid gray;
 }
-
-/* .image-container.featured {
-	border: 10px solid gold;
-} */
 
 .expand {
   position: absolute;

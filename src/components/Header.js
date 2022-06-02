@@ -28,6 +28,8 @@ function Header() {
     switch (location.pathname) {
       case "/flow-with-megmo":
         return "Flow with Megmo";
+      case "/brainfood":
+        return "Brainfood";
       case "/wishlist":
         return "Wishlist";
       case "/playlist-palette":
@@ -79,14 +81,17 @@ function Header() {
             ) : null}
           </div>
           {isMenuOpen ? (
-            <div className="absolute bg-white border-black border z-0">
-              <CustomLink className="p-1 hover:bg-gray-300 no-underline" to="/flow-with-megmo">
+            <div className="absolute bg-white border-black border z-0 rounded-md">
+              <CustomLink className="p-1 hover:bg-gray-300 rounded-t-md" to="/flow-with-megmo">
                 Flow with Megmo
+              </CustomLink>
+              <CustomLink className="p-1 hover:bg-gray-300" to="/brainfood">
+                Brainfood
               </CustomLink>
               <CustomLink variants={dropdownLink} className="p-1 hover:bg-gray-300" to="/wishlist">
                 Wishlist
               </CustomLink>
-              <CustomLink className="p-1 hover:bg-gray-300" to="/playlist-palette">
+              <CustomLink className="p-1 hover:bg-gray-300 rounded-b-md" to="/playlist-palette">
                 Playlist Palette
               </CustomLink>
             </div>

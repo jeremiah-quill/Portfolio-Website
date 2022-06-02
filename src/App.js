@@ -1,12 +1,12 @@
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import projectData from './content/content';
-import CaseStudy from './components/CaseStudy';
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import projectData from "./content/content";
+import CaseStudy from "./components/CaseStudy";
 
 function App() {
   const location = useLocation();
@@ -27,10 +27,6 @@ function App() {
       <AnimatePresence exitBeforeEnter initial={true}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/work" element={<Work />} /> */}
-          {/* <Route path="/flow-with-megmo" element={<CaseStudyFWM />} />
-          <Route path="/wishlist" element={<CaseStudyWishlist />} />
-          <Route path="/playlist-palette" element={<CaseStudyPlaylists />} /> */}
           {caseStudyRoutes}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -93,7 +93,7 @@ const Home = () => {
         </div>
         <div className="section-container">
           <h1 className="section-title">Take a look at my featured work</h1>
-          <ul className="project-list">
+          <ul className="flex flex-col gap-10 lg:flex-row lg:flex-wrap lg:gap-0">
             {projectData.map((project, idx) => (
               <Project project={project} key={idx} />
             ))}
