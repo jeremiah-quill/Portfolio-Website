@@ -35,7 +35,7 @@ const Home = () => {
               was able to refine my skills and experience working as part of a team.
               <br></br>
               <br></br>
-              My background is in finanace and accounting, specifically in the corporate real estate
+              My background is in finance and accounting, specifically in the corporate real estate
               industry, which has given me invaluable experience as a professional. I am organized,
               work well on my own or as part of a team, and understand how to manage to a deadline.
               <br></br>
@@ -64,9 +64,9 @@ const Home = () => {
               then I will make sure to take the time and dive deep when necessary.
               <br></br>
               <br></br>
-              I'm currently teaching myself <span className="important-text">Gatsby</span>,{" "}
-              <span className="important-text">Figma</span>, and{" "}
-              <span className="important-text">Tailwind</span>.
+              I'm currently teaching myself <span className="important-text">NextJS</span>,{" "}
+              <span className="important-text">Tailwind</span>, and{" "}
+              <span className="important-text">Vercel</span>.
             </p>
             <div>
               <h3 className="what-im-good-at">What I'm good at</h3>
